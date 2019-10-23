@@ -25,9 +25,27 @@
 
 @keyframes textBounce{
     10%{
-       transform: translateY(-10px); 
+       transform: translateY(-15px) ; 
     }
     20%{
-        transform: translateY(0px); 
+        transform: translateY(0px) ; 
+    }
+}
+
+@keyframes shadow-motion{
+    10%{
+        top: 80px;
+        left: -10px;
+    }
+
+    20%{
+        top: 60px;
+        left: -5px;
+    }
+}
+
+@keyframes rays{
+    100%{
+        transform: rotate(360deg) translate(0,0);
     }
 }

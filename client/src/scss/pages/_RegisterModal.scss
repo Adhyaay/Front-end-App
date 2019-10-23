@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background: url(https://images.unsplash.com/photo-1482517967863-00e15c9b44be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+  font-family: sans-serif;
+  background-size: cover;
+  padding: 0;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(255, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.box .inputbox {
+  position: relative;
+}
+.box .inputbox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.box .inputbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+/* .box .inputbox input: focus~ label, */
+.box .inputbox input:focus ~ label {
+  top: -18px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}
+.box button {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.box .inputbox1 input {
+  /* width: 100%; */
+  /* padding:10px 0; */
+  /* font-size: 16px; */
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  /* border: none; */
+  /* border-bottom: 1px solid #fff; */
+  /* outline: none; */
+  /* background: transparent; */
+}
+.box .inputbox1 label {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  letter-spacing: 1px;
+  padding: 10px 0;
+
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  /* transition: .5s; */
+}
+#g {
+  color: #fff;
+  font-size: 16px;
+}
+#inputbox2 {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
