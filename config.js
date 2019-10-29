@@ -4,6 +4,6 @@ module.exports = {
   URL: process.env.BASE_URL || "http://localhost:3000",
   MONGODB_URI:
     process.env.MONGODB_URI ||
-    "mongodb+srv://Logan47:Brocklesnar1%40@cluster0-pwstc.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb+srv://<username>:<password>cluster0-pwstc.mongodb.net/test?retryWrites=true&w=majority",
   JWT_SECRET: process.env.JWT_SECRET || "superSecret"
 };
