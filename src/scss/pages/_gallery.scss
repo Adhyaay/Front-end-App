@@ -6,6 +6,16 @@
     overflow: hidden;
     background: rgb(59, 17, 54);
 
+    .particle-js-wrapper{
+        width: 100%;
+        height: 100vh;
+
+        @media screen and (max-width: 620px){
+            width: 400%;
+            height: 100%;
+        }
+    }
+
     .section-heading{
         font-size: 56px;
         position: absolute;
@@ -14,15 +24,26 @@
         color: white;
         letter-spacing: 2px;
         font-weight: 600;
+
+        @media screen and (max-width: 620px){
+            font-size: 32px;
+            top: 4%;
+            left: 20%;
+        }
     }
 
     .gallery-wrapper{
         width: 50%;
-        height: 70%;
+        height: 80%;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -30%);
+
+        @media screen and (max-width: 620px){
+            width: 90%;
+            height: 40%;
+        }
 
         .gallery-preview{
             width: 100%;
@@ -75,6 +96,10 @@
                     border: 5px solid rgba(255, 255, 255, 0);
                     transform: translateX(-50%);
 
+                    @media screen and (max-width: 620px){
+                        border: 2px solid rgba(255, 255, 255, 0);
+                    }
+
                     &.selected{
                         opacity: 1;
                         border: none;
@@ -102,6 +127,11 @@
         left: 20px;
         width: 10%;
 
+
+        @media screen and (max-width: 620px){
+            width: 20%;
+        }
+
         img{
             width: 100%;
             
@@ -109,6 +139,11 @@
                 position: absolute;
                 left: 55px;
                 top: -90px; 
+
+                @media screen and (max-width: 620px){
+                    left: 32px;
+                    top: -50px;
+                }
             }
         }
     }
@@ -119,6 +154,10 @@
         right: 20px;
         width: 10%;
 
+        @media screen and (max-width: 620px){
+            width: 20%;
+        }
+
         img{
             width: 100%;
 
@@ -127,6 +166,11 @@
                 left: -57px;
                 top: -90px; 
                 transform: rotateY(180deg);
+
+                @media screen and (max-width: 620px){
+                    left: -32px;
+                    top: -50px;
+                }
             }
         }
     }

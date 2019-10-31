@@ -1,7 +1,34 @@
+
 .body-wrapper{
-    height: auto;
+    height: 100vh;
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    // z-index: 10000;
+    &::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    .page-wrapper{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background: yellow;
+        background: transparent;
+        z-index: 100;
+        overflow-y: scroll;
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        .page-scroller{
+            width: 100%;
+            height: 500vh;
+        }
+    }
 
 }
 
@@ -11,6 +38,7 @@
     background: #17182f; //linear-gradient(to bottom right, rgb(43, 47, 119), rgb(7, 11, 52));
     overflow: hidden;
     position: relative;
+    // z-index: 100;
 
     .stars-wrapper{
         width: 100%;
@@ -77,6 +105,18 @@
         z-index: 20;
         overflow: unset;
 
+        @media screen and (max-width: 620px){
+            font-size: 50px;
+            top:80%;
+            left:45%;
+            text-shadow: 1px -1px 0 #919191, 2px -2px 0 #919191, 3px -3px 0 #919191, 4px -4px 0 #919191;
+        }
+
+        @media screen and (max-width: 400px){
+            font-size: 40px;
+            top: 77%;
+        }
+
         &_letter{
             display: inline-block; 
             position: absolute;
@@ -100,6 +140,15 @@
                 top: 60px;
                 left: -5px;
 
+                @media screen and (max-width: 620px){
+                    top: 31px;
+                }
+
+                @media screen and (max-width: 400px){
+                    top: 25px;
+                    left: -2px;
+                }
+
             }
                 
 
@@ -111,6 +160,15 @@
             &:nth-child(2){
                 left: 85px;
                 top: -2px;
+
+                @media screen and (max-width: 620px){
+                    left: 50px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 40px;
+                    top: -1px;
+                }
 
                 .main{
                     animation-delay: 1s;
@@ -125,6 +183,14 @@
             &:nth-child(3){
                 left: 170px;
                 top:  -4px;
+                @media screen and (max-width: 620px){
+                    left: 100px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 80px;
+                    top: -2px;
+                }
 
                 .main{
                     animation-delay: 2s;
@@ -137,6 +203,15 @@
             &:nth-child(4){
                 left: 255px;
                 top: -6px;
+
+                @media screen and (max-width: 620px){
+                    left: 150px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 120px;
+                    top: -3px;
+                }
 
                 .main{
                     animation-delay: 3s;
@@ -151,6 +226,15 @@
                 left: 330px;
                 top: -8px;
 
+                @media screen and (max-width: 620px){
+                    left: 190px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 160px;
+                    top: -4px;
+                }
+
                 .main{
                     animation-delay: 4s;
                 }
@@ -164,6 +248,15 @@
                 left: 420px;
                 top: -10px;
 
+                @media screen and (max-width: 620px){
+                    left: 240px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 200px;
+                    top: -5px;
+                }
+
                 .main{
                     animation-delay: 5s;
                 }
@@ -176,6 +269,15 @@
             &:nth-child(7){
                 left: 500px;
                 top: -12px;
+
+                @media screen and (max-width: 620px){
+                    left: 285px;
+                }
+
+                @media screen and (max-width: 400px){
+                    left: 240px;
+                    top: -6px;
+                }
 
                 .main{
                     animation-delay: 6s;
@@ -194,6 +296,12 @@
         left: 47%;
         transform: translateX(-50%);
         width: 70%;
+
+        @media screen and (max-width: 620px){
+            bottom: -22%;
+            left: 50%;
+            width: 110%;
+        }
 
         img{
             width: 100%;
@@ -221,15 +329,41 @@
             animation: textBounce 3s ease-in-out infinite;
             font-family: 'Bowlby One SC', cursive;
 
+            @media screen and (max-width: 620px){
+                font-size: 30px;
+                text-shadow: 0px 1px 0 #919191, 0px 2px 0 #919191, 0px 3px 0 #919191, 0px 4px 0 #919191, 0px 5px 0 #919191, 0px 6px 0 #919191,0px 7px 0 #919191;
+            }
+
+            @media screen and (max-width: 400px){
+                font-size: 24px;
+            }
+
             &:nth-child(1){
                 left: 30px;
                 top: -40px;
+
+                @media screen and (max-width: 620px){
+                    left: 3%;
+                }
+
+                @media screen and (max-width: 400px){
+                    top: -60px;
+                }
             }
 
             &:nth-child(2){
                 right: 20px;
                 top: -30px;
                 animation-delay: 4s;
+
+                @media screen and (max-width: 620px){
+                    right: 4%;
+                    top: -50px;
+                }
+
+                @media screen and (max-width: 400px){
+                    top: -60px;
+                }
             }
         }
     }
@@ -253,6 +387,12 @@
             border-radius: 80%;
             z-index: 10;
 
+            @media screen and (max-width: 620px){
+                left: -600px;
+                top: -100px;
+                width: 800px;
+            }
+
         }
 
         &-two{
@@ -265,6 +405,11 @@
             height: 450px;
             background-image: linear-gradient(to bottom,	#455f48 ,#263a29 90%);
             z-index: 11;
+
+            @media screen and (max-width: 620px){
+                width: 230%;
+                left: -250px;
+            }
         }
 
         &-three{
@@ -277,6 +422,12 @@
             background: #4c664f;
             border-radius: 80%;
             z-index: 10;
+
+            @media screen and (max-width: 620px){
+                right: -400px;
+                top: -100px;
+                width: 600px;
+            }
 
         }
     }

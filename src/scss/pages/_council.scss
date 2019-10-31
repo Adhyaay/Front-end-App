@@ -1,0 +1,222 @@
+.section-council{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: rgb(65, 28, 43);
+
+    .animation-wrapper{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+
+        .particle-js-wrapper{
+            width: 100%;
+            height: 100vh;
+
+            @media screen and (max-width: 620px){
+                width: 400%;
+                height: 100%;
+            }
+
+        }
+
+
+        .image{
+            position: absolute;
+            height: auto;
+            box-sizing: border-box;
+
+            &:nth-child(2){
+                left: 3%;
+                width: 5%;
+                animation: fly 15s linear infinite ;
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+
+                    &:nth-child(2){
+                        animation: glow 3s ease infinite;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                left: 38%;
+                width: 5%;
+                animation: fly 10s linear infinite ;
+                
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+
+                    &:nth-child(2){
+                        animation: glow 3s ease infinite;
+                    }
+                }
+
+            }
+
+            &:nth-child(4){
+                left: 55%;
+                width: 6%;
+                animation: fly 20s linear infinite ;
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 70%;
+
+                    &:nth-child(2){
+                        animation: glow 3s ease infinite;
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            &:nth-child(5){
+                left: 85%;
+                width: 5%;
+                animation: fly 8s linear infinite ;
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+
+                    &:nth-child(2){
+                        animation: glow 3s ease infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-heading{
+        font-size: 56px;
+        position: absolute;
+        top: 5%;
+        left: 12%;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: 600;
+
+        @media screen and (max-width: 620px){
+            font-size: 32px;
+            top: 4%;
+            left: 20%;
+        }
+    }
+
+    .council-wrapper{
+        width: 80%;
+        height: 100%;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+
+        @media screen and (max-width: 620px){
+            padding-top: 80px;
+        }
+
+        .council-convenor{
+            width: 100%;
+            height: 40%;
+            display: block;
+            margin-top: 10%;
+
+            &--heading{
+                font-size: 24px;
+                display: block;
+                color: rgb(145, 145, 145);
+                margin-bottom: 24px;
+            }
+
+            img{
+                width: 10%;
+                border-radius: 50%;
+
+                @media screen and (max-width: 620px){
+                    width: 25%;
+                }
+            }
+
+            &--name{
+                display: block;
+                color: white;
+                font-size: 16px;
+            }
+        }
+
+        .council-secretaries{
+            width: 100%;
+            height: 41%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            transition: 1s all ease;
+            @media screen and (max-width: 620px){
+                margin-top: 20px;
+            }
+
+            &--heading{
+                font-size: 24px;
+                display: block;
+                color: rgb(145, 145, 145);
+                margin-bottom: 20px;
+            }
+            
+            &--wrapper{
+                width: 300%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin-top: 40px;
+                transition: 0.8s all ease;
+                z-index: 1000;
+
+                .council-secretary{
+                    display: block;
+                    float: left;
+                    width: 33.333%;
+                    height: 100%;
+                    text-align: center;
+
+                    img{
+                        width: 15%;
+                        border-radius: 50%;
+
+                        @media screen and (max-width: 620px){
+                            width: 30%;
+                        }
+                    }
+
+                    &--name{
+                        display: block;
+                        font-size: 16px;
+                        color: white;
+
+                    }
+
+                    &--title{
+                        display: block;
+                        font-size: 12px;
+                        color: rgb(163, 163, 163);
+                    }
+                }
+            }
+        }
+    }
+}
