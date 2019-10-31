@@ -27,10 +27,10 @@ class Home extends React.Component{
         this.myInterval = setInterval( () => {
             if(this.state.scrollPosition !== this.scroller.current.scrollTop){
                 if(this.state.scrollPosition < this.scroller.current.scrollTop){
-                this.setState({ scrollPosition: this.state.scrollPosition + window.innerHeight })
+                this.setState({ scrollPosition: this.state.scrollPosition + (window.innerWidth < 620 ? window.outerHeight: window.innerHeight)})
                 }
-                else{
-                    this.setState({ scrollPosition: this.state.scrollPosition - window.innerHeight })
+                if(this.state.scrollPosition > this.scroller.current.scrollTop){
+                    this.setState({ scrollPosition: this.state.scrollPosition - (window.innerWidth < 620 ? window.outerHeight: window.innerHeight) })
                 }
             }
         }, 1200)
