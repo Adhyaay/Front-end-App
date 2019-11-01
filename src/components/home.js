@@ -19,11 +19,23 @@ class Home extends React.Component {
   target = React.createRef();
 
   state = {
-    scrollPosition: 0
+    scrollPosition: null
   };
 
-  //   componentDidMount() {
-  //     console.log(this.target.current.clientHeight / 5);
+    componentDidMount() {
+        const wrappedElement = document.querySelector('.fullpage-wrapper');
+        console.log(wrappedElement.style.transform.split(',')[1].split('p')[0]);
+        this.myInterval = setInterval( () => {
+            if(this.state.scrollPosition !== parseInt(wrappedElement.style.transform.split(',')[1].split('p')[0])){
+            this.setState({ scrollPosition: parseInt(wrappedElement.style.transform.split(',')[1].split('p')[0])})
+            // console.log(-(wrappedElement.style.transform.split(',')[1].split('p')[0]));
+            // console.log(this.state.scrollPosition);
+            }
+
+            
+        }, 500)
+        
+    }
 
   //     this.myInterval = setInterval(() => {
   //       if (this.state.scrollPosition !== this.scroller.current.scrollTop) {
@@ -67,16 +79,19 @@ class Home extends React.Component {
   //   }
   render() {
     return (
+        <>
+        <MainLogo position={-(this.state.scrollPosition)} height={this.target.current ? (this.target.current.clientHeight / 5) : null} />
+        <Navbar />
       <ReactFullpage
         scrollingSpeed={1000} /* Options here */
         render={({ state, fullpageApi }) => {
           return (
-            <ReactFullpage.Wrapper>
+            <ReactFullpage.Wrapper >
               <div className="body-wrapper" ref={this.target}>
                 {/* <div className="page-wrapper" ref={this.scroller}>
           <div className="page-scroller"></div>
         </div> */}
-                <Navbar />
+                
                 <div className="section-main section">
                   <div className="stars-wrapper">
                     <div className="night">
@@ -86,14 +101,7 @@ class Home extends React.Component {
                     </div>
                   </div>
                   <div className="particle-js-wrapper">
-                    <MainLogo
-                      position={this.state.scrollPosition}
-                      height={
-                        this.target.current
-                          ? this.target.current.clientHeight
-                          : null
-                      }
-                    />
+                    
                     <Particles
                       params={{
                         particles: {
@@ -203,6 +211,7 @@ class Home extends React.Component {
           );
         }}
       />
+      </>
     );
   }
 
