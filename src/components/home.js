@@ -1,6 +1,5 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import { Link } from 'react-router-dom';
 import MainLogo from './mainLogo';
 
 import About from './about';
@@ -24,16 +23,42 @@ class Home extends React.Component{
     }
 
     componentDidMount(){
+        console.log(this.target.current.clientHeight/5);
+
+        // this.myInterval = setInterval( () => {
+        //     if(this.state.scrollPosition !== this.scroller.current.scrollTop){
+        //         if(this.state.scrollPosition < this.scroller.current.scrollTop){
+        //         this.setState({ scrollPosition: this.state.scrollPosition + (window.innerWidth < 620 ? window.outerHeight: window.innerHeight)})
+        //         }
+        //         if(this.state.scrollPosition > this.scroller.current.scrollTop){
+        //             this.setState({ scrollPosition: this.state.scrollPosition - (window.innerWidth < 620 ? window.outerHeight: window.innerHeight) })
+        //         }
+        //     }
+        // }, 1200)
+
         this.myInterval = setInterval( () => {
             if(this.state.scrollPosition !== this.scroller.current.scrollTop){
-                if(this.state.scrollPosition < this.scroller.current.scrollTop){
-                this.setState({ scrollPosition: this.state.scrollPosition + (window.innerWidth < 620 ? window.outerHeight: window.innerHeight)})
+                if(this.state.scrollPosition <= this.scroller.current.scrollTop){
+                this.setState({ scrollPosition: this.state.scrollPosition + this.target.current.clientHeight})
                 }
-                if(this.state.scrollPosition > this.scroller.current.scrollTop){
-                    this.setState({ scrollPosition: this.state.scrollPosition - (window.innerWidth < 620 ? window.outerHeight: window.innerHeight) })
+                else{
+                    this.setState({ scrollPosition: this.state.scrollPosition - this.target.current.clientHeight })
                 }
             }
         }, 1200)
+
+        // this.myInterval = setInterval( () => {
+        //     if(this.state.scrollPosition !== window.pageYOffset){
+        //         if(this.state.scrollPosition < window.pageYOffset){
+        //         this.setState({ scrollPosition: this.state.scrollPosition + ( window.innerHeight)})
+        //         }
+        //         if(this.state.scrollPosition > window.pageYOffset){
+        //             this.setState({ scrollPosition: this.state.scrollPosition - ( window.innerHeight) })
+        //         }
+        //     }
+        // }, 500)
+    
+
     }
 
     componentDidUpdate(){
@@ -43,6 +68,17 @@ class Home extends React.Component{
             this.scroller.current.scrollTo(0, this.state.scrollPosition);
             this.target.current.scrollTo(0, this.state.scrollPosition);
         }
+
+        // const position = window.pageYOffset;
+        // if(this.state.scrollPosition !== position ){
+        //     console.log(this.state.scrollPosition);
+        //     if(this.state.scrollPosition < window.pageYOffset){
+        //         window.scrollBy(0, window.innerHeight - (window.pageYOffset%window.innerHeight));
+        //     }
+        //     if(this.state.scrollPosition > window.pageYOffset){
+        //         window.scrollTo(0, this.state.scrollPosition);
+        //     }
+        // }
     }
 
     componentWillUnmount(){
@@ -69,7 +105,7 @@ class Home extends React.Component{
                         </div>
                     </div>
                     <div className='particle-js-wrapper'>
-                    <MainLogo position={this.state.scrollPosition}/>
+                    <MainLogo position={this.state.scrollPosition} height={this.target.current ? this.target.current.clientHeight: null}/>
                     <Particles
                         params={{
                             "particles": {

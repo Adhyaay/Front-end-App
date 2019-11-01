@@ -18,17 +18,14 @@ import MainLogo2 from '../images/mainLogo.svg';
 
         if(this.state.position !== this.props.position){
             this.setState({ position: this.props.position})
-            const pageHeight = window.innerHeight;
+            const pageHeight = this.props.height;
             let scrollTop = this.props.position ;
-            console.log(scrollTop)
-                console.log('entered');
                 if(scrollTop > 100){
                     this.setState({
                         addClassName: 'logo aside'
                     });
                 }
                 if(scrollTop >= 4*pageHeight){
-                    console.log('true');
                     this.setState({
                         addClassName: 'logo footer'
                     });
@@ -86,7 +83,6 @@ import MainLogo2 from '../images/mainLogo.svg';
     //     } 
     // }
     render(){
-        console.log(this.state);
         // if(this.state.position !== this.props.position){
         // this.setState({ position: this.props.position})
         // }
