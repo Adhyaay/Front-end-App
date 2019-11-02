@@ -2,7 +2,6 @@ import React from 'react';
 import Particles from 'react-particles-js';
 
 //images
-import testImage from '../images/testImage.jpg';
 import testImage0 from '../images/galleryImage1.jpg';
 import testImage1 from '../images/galleryImage2.jpg';
 import testImage2 from '../images/galleryImage3.jpg';

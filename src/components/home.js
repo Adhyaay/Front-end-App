@@ -81,7 +81,7 @@ class Home extends React.Component {
     return (
         <>
         <MainLogo position={-(this.state.scrollPosition)} height={this.target.current ? (this.target.current.clientHeight / 5) : null} />
-        <Navbar />
+        {/* <Navbar /> */}
       <ReactFullpage
         scrollingSpeed={1000} /* Options here */
         render={({ state, fullpageApi }) => {

@@ -4,6 +4,7 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Loader from './loader';
 import Home from './home';
 import Events from './events';
+import Navbar from "./navbar";
 import Music from './music';
 
 class  App extends React.Component{
@@ -32,6 +33,7 @@ class  App extends React.Component{
         <>
           {/* <Music /> */}
           <BrowserRouter>
+          <Navbar />
             <Route path='/' exact component={Home} />
             <Route path='/events' exact component={Events} />
           </BrowserRouter>

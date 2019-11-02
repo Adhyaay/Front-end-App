@@ -1,0 +1,40 @@
+.test2 {
+  background: url(../../images/bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.login {
+  margin-top: 100px;
+  // overflow-y: scroll;
+}
+
+.login .card {
+  background: rgba(0, 0, 0, 0.6);
+}
+.login label {
+  font-size: 16px;
+  color: #ccc;
+}
+.login input {
+  font-size: 22px !important;
+  color: #ccc;
+}
+.login button:hover {
+  padding: 0px 40px;
+  transition-duration: inherit;
+}
+.back {
+  position: absolute;
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 80px;
+  top: 0;
+  left: 0;
+}
