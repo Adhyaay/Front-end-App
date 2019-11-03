@@ -1,8 +1,5 @@
-
-
 @import "abstracts/mixins";
 @import "abstracts/variables";
-
 
 @import "base/animations";
 @import "base/base";
@@ -11,7 +8,6 @@
 @import "components/shootingStar";
 @import "components/navbar";
 @import "components/counter";
-
 
 @import "pages/home";
 @import "pages/about";
@@ -23,5 +19,5 @@
 @import "pages/footer";
 @import "pages/council";
 @import "pages/eventViewer";
-// @import "pages/RegisterModal";
-// @import "pages/LoginModal";
+@import "pages/RegisterModal";
+@import "pages/LoginModal";

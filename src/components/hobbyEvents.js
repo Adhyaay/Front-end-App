@@ -1,6 +1,10 @@
 import React from 'react';
 
 import EventViewer from './eventViewer';
+import history from "./history";
+import axios from "axios";
+import { connect } from "react-redux";
+
 
 //images
 import dashRaceImage from '../images/hobby/dash-race.jpg';
@@ -397,11 +401,37 @@ class HobbyEvents extends React.Component{
         document.querySelector('.event-viewer').scrollTo(0,0);
     }
 
+    onRegisterClick = () => {
+      const { isAuthenticated, user } = this.props;
+  
+      if (!isAuthenticated) {
+        history.push("/login");
+      } else {
+        const self = this;
+        axios
+          .post("https://gentle-dusk-33875.herokuapp.com/api/event/register", {
+            email: user.email,
+            event: this.state.eventNames[this.state.event],
+            mainevent: 'hobby',
+            name: user.name
+          })
+          .then(function(res) {
+            self.setState({
+              message: res.data.message
+            });
+          })
+          .catch(function(err) {
+            console.log(err);
+          });
+      }
+    }
+
     render(){
         return(
             <>
             {this.state.viewEvent && 
-                <EventViewer  
+                <EventViewer 
+                    registration={this.onRegisterClick}
                     back={this.back}
                     next={this.next}
                     previous={this.previous}
@@ -777,4 +807,12 @@ class HobbyEvents extends React.Component{
     }
 }
 
-export default HobbyEvents;
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(HobbyEvents);

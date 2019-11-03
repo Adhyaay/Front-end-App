@@ -1,18 +1,24 @@
-import React from 'react';
-import { BrowserRouter, Route} from 'react-router-dom';
+import React from "react";
+import { Router, Route } from "react-router-dom";
+import { Provider } from "react-redux";
 
-import Loader from './loader';
-import Home from './home';
-import Events from './events';
+import store from "./store";
+import { loadUser } from "../actions/authActions";
+import RegsterModal from "./auth/RegisterModal";
+import LoginModal from "./auth/LoginModal";
+import Confirm from "./confirm";
+import history from "./history";
+
+import Loader from "./loader";
+import Home from "./home";
+import Events from "./events";
 import Navbar from "./navbar";
-import Music from './music';
 
-class  App extends React.Component{
-
+class App extends React.Component {
   state = { loading: true };
 
-  sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  sleep = milliseconds => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
   };
 
   wait = async (milliseconds = 2000) => {
@@ -21,25 +27,29 @@ class  App extends React.Component{
       loading: false
     });
   };
- 
+
   // 4 sec for loading screen
-  componentDidMount(){
+  componentDidMount() {
+    store.dispatch(loadUser());
     this.wait(2000);
   }
 
-  render(){
-      if (this.state.loading) return <Loader/>;
-      return (
-        <>
-          {/* <Music /> */}
-          <BrowserRouter>
+  render() {
+    if (this.state.loading) return <Loader />;
+    return (
+      <Provider store={store}>
+        {/* <Music /> */}
+        <Router history={history}>
           <Navbar />
-            <Route path='/' exact component={Home} />
-            <Route path='/events' exact component={Events} />
-          </BrowserRouter>
-        </>
-     );
-    }
+          <Route path="/" exact component={Home} />
+          <Route path="/events" exact component={Events} />
+          <Route path="/register" exact component={RegsterModal} />
+          <Route path="/login" exact component={LoginModal} />
+          <Route path="/confirm" exact component={Confirm} />
+        </Router>
+      </Provider>
+    );
+  }
 }
 
 export default App;
