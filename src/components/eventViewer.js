@@ -8,7 +8,7 @@ class EventViewer extends React.Component{
         const length = this.props.coordinator.length;
         return this.props.coordinator.map( (el) => { 
             return(
-                <div className='event-viewer--coordinators-wrapper-coordinator' style={{ width: `calc(100%/${length})`}}>
+                <div className='event-viewer--coordinators-wrapper-coordinator' style={window.innerWidth > 620 ? { width: `calc(100%/${length})`} : { width: `100%`}}>
                     {el.name && <span className='event-viewer--coordinators-wrapper-coordinator-name'>{el.name}</span>}
                     {el.name && <span className='event-viewer--coordinators-wrapper-coordinator-post'>Event Co-ordinator</span>}
                     <span className='event-viewer--coordinators-wrapper-coordinator-contact'>

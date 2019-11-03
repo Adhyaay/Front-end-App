@@ -8,7 +8,7 @@
         position: relative;
         display: block;
         float: left;
-        height: 100vh;
+        // height: 100vh;
         text-align: center;
         transition: 1s all ease;
         padding: 0;
@@ -18,11 +18,16 @@
             width: calc( 100%/3);
             height: 100vh;
 
-            background: blue;
+            @media screen and (max-width: 620px){
+                width: 100%;
+                height: calc( 100vh/3);
+            }
+
+            
 
             .content-wrapper{
                 color: white; 
-                height: 100vh;
+                height: 100%;
                 width: 100%;
                 box-sizing: border-box;
                 background-position: center;
@@ -77,11 +82,17 @@
 
         &:nth-child(2){
             width: calc( 100%/3);
+            height: 100vh;
+
+            @media screen and (max-width: 620px){
+                width: 100%;
+                height: calc( 100vh/3);
+            }
 
             .content-wrapper{
                 background: red;
                 color: white;
-                height: 100vh;
+                height: 100%;
                 background-position: right;
                 background-size: cover;
 
@@ -133,11 +144,17 @@
 
         &:nth-child(3){
             width: calc(100%/3 );
+            height: 100vh;
+
+            @media screen and (max-width: 620px){
+                width: 100%;
+                height: calc( 100vh/3);
+            }
 
             .content-wrapper{
                 background: green;
                 color: white;
-                height: 100vh;
+                height: 100%;
                 background-position: right;
                 background-size: cover;
 
@@ -190,14 +207,14 @@
 
         &.first{
             &:nth-child(1){
-                width: calc( 100%);
+                width: 100%;
                 height: 100vh;
                 margin: 0;
     
                 .content-wrapper{
                     background: blue;
                     color: white;
-                    height: 100vh;
+                    height: 100%;
                     margin: 0;
                     background-position: center;
                     background-size: cover;
@@ -223,6 +240,13 @@
                             width: 50%;
 
                         }
+
+                        @media screen and (max-width: 620px){
+                            width: 40px;
+                            height: 40px;
+                            top: 30px;
+                            left: 20px;
+                        }
                     }
                 }
             }
@@ -230,10 +254,15 @@
             &:nth-child(2){
                 width: 0;
                 background: red;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0vh;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
 
                     &--title{
                         visibility: hidden;
@@ -248,10 +277,15 @@
             &:nth-child(3){
                 width: 0;
                 background: green;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
 
                     &--title{
                         visibility: hidden;
@@ -268,8 +302,13 @@
         &.second{
             &:nth-child(1){
                 width: 0;
-                height: 100vh;
+                height: 100%;
                 background: blue;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0;
+                }
     
                 .content-wrapper{
                     color: white;
@@ -292,7 +331,7 @@
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
                     background-position: right;
                     background-size: cover;
 
@@ -317,6 +356,13 @@
                             width: 50%;
 
                         }
+
+                        @media screen and (max-width: 620px){
+                            width: 40px;
+                            height: 40px;
+                            top: 30px;
+                            left: 20px;
+                        }
                     }
                 }
             }
@@ -325,10 +371,15 @@
                 width: 0;
                 background: green;
                 height: 100vh;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
 
                     &--title{
                         visibility: hidden;
@@ -347,10 +398,15 @@
                 width: 0;
                 height: 100vh;
                 background: blue;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
 
                     &--title{
                         visibility: hidden;
@@ -366,10 +422,15 @@
                 width: 0;
                 background: red;
                 height: 100vh;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 0;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
 
                     &--title{
                         visibility: hidden;
@@ -384,10 +445,15 @@
             &:nth-child(3){
                 width: 100%;
                 background: green;
+
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: 100vh;
+                }
     
                 .content-wrapper{
                     color: white;
-                    height: 100vh;
+                    height: 100%;
                     background-position: right;
                     background-size: cover;
 
@@ -411,6 +477,13 @@
                         img{
                             width: 50%;
 
+                        }
+
+                        @media screen and (max-width: 620px){
+                            width: 40px;
+                            height: 40px;
+                            top: 30px;
+                            left: 20px;
                         }
                     }
                 }

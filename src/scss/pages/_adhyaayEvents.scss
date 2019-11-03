@@ -11,6 +11,90 @@
         background: transparent;
     }
 
+    @media screen and (max-width: 620px){
+            animation: fillUp 1s ease 1;
+            animation-fill-mode: backwards;
+
+            &--mobile{
+                width: 100%;
+                height: auto;
+
+                .section{
+                    width: 100%;
+                    height: 100vh;
+                    background: yellow;
+                    display: block;
+                    position: relative;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    // background: linear-gradient(to top right, rgba(255, 0, 0, 0.514), rgba(255, 166, 0, 0.404));
+                    
+    
+                    &-content{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(to top right, rgba(255, 0, 0, 0.486), rgba(255, 166, 0, 0.473));
+    
+                        &--title{
+                            width: 100%;
+                            position: absolute;
+                            top: 20%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 48px;
+                            // font-family: 'Great Vibes', cursive;
+                            font-weight: 600;
+                            letter-spacing: 5px;
+                            -webkit-text-stroke-width: 2px;
+                            -webkit-text-stroke-color: white;
+                            color: transparent;
+    
+                        }
+    
+                        
+    
+                        
+                    }
+    
+                    .button{
+                        position: absolute;
+                        bottom: 20%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 105;
+                        width: 40%;
+                        height: 8%;
+            
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            background: white;
+                            border: none;
+                            border-radius: 0;
+                            font-size: 20px;
+                            cursor: pointer;
+                            z-index: 1000;
+                            color: red;
+                            transition: 0.3s all linear;
+                            outline-offset: 5px;
+                            margin: 0 auto;
+                            
+                            &:hover{
+                                transform: scale(1.05);
+                                box-shadow: 0 5px 6px rgba(0, 0, 0, 0.5);
+                                outline: 2px solid white;
+                            }
+                        }   
+                    }   
+                }
+            }
+
+    }
+
     .scroll-wrapper{
         width: 100%;
         height: 100vh;
@@ -87,6 +171,11 @@
             transition: 1s all ease;
             scroll-behavior: smooth;
 
+            @media screen and (max-width: 620px){
+                width: 100%;
+                height: 100vh;
+            }
+
             &:nth-child(1){
                 color: white;
                 // overflow-y: scroll;
@@ -98,7 +187,7 @@
 
                 .section{
                     width: 100%;
-                    height: 100vh;
+                    height: 100%;
                     background: yellow;
                     display: block;
                     position: relative;
@@ -172,6 +261,7 @@
             &:nth-child(2){
                 color: white;
                 animation-delay: 0.4s;
+                height: 100vh;
 
                 // overflow-y: scroll;
 
@@ -182,6 +272,11 @@
                     width: 100%;
                     height: auto;
                     transition: 0.6s all ease;
+
+                    @media screen and (max-width: 620px){
+                        width: 100%;
+                        height: calc(100vh/3);
+                    }
 
                     .section{
                         width: 100%;
@@ -265,10 +360,14 @@
                 animation-delay: 0.8s;
                 // overflow-y: scroll;
                 transition: 1s all ease;
+                @media screen and (max-width: 620px){
+                    width: 100%;
+                    height: calc(100vh/3);
+                }
 
                 .section{
                     width: 100%;
-                    height: 100vh;
+                    height: 100%;
                     background: skyblue;
                     display: block;
                     position: relative;

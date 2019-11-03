@@ -276,7 +276,7 @@ class LitEvents extends React.Component{
         //     this.setState({ scrollPosition: this.scroller.current.scrollTop})
         //     }
         // }, 10);
-
+      if(window.innerWidth > 620){
         this.myInterval = setInterval( () => {
             if(this.state.scrollPosition !== this.scroller.current.scrollTop){
                 if(this.state.scrollPosition < this.scroller.current.scrollTop){
@@ -287,7 +287,7 @@ class LitEvents extends React.Component{
                 }
             }
         }, 1000);
-        
+      }
     }
 
     componentWillUnmount(){
@@ -295,6 +295,7 @@ class LitEvents extends React.Component{
     }
 
     componentDidUpdate(){
+      if(window.innerWidth > 620){
         const position = this.targetFirst.current.scrollTop;
         if(this.state.scrollPosition !== position ){
             console.log(this.state.scrollPosition);
@@ -304,6 +305,7 @@ class LitEvents extends React.Component{
             this.targetThird.current.scrollTo(0, this.state.scrollPosition);
             this.targetSecond.current.style.bottom = `${this.state.scrollPosition*(-1)}px`;
         }
+      }
     }
 
     handleScroll = (event) => {
@@ -357,6 +359,8 @@ class LitEvents extends React.Component{
                     coordinator={this.state.eventCoordinators[this.state.event]} 
                     description={this.state.eventDescription[this.state.event]}
                 />}
+            {
+            window.innerWidth > 620 ?
             <div className='events-wrapper' >
                 <div className='scroll-wrapper' ref={this.scroller}><div className='scroller lit' ></div></div>
                 <div className='fixed-div'>
@@ -508,6 +512,148 @@ class LitEvents extends React.Component{
                     </div>
                 </div>
             </div>
+            : 
+            <div className='events-wrapper'>
+              <div className='events-wrapper--mobile'>
+              <div className='section' id='1'  style={{ backgroundImage : `url(${this.state.eventImages[0]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[0]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='1' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='2'  style={{ backgroundImage : `url(${this.state.eventImages[1]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[1]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='2' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='3'  style={{ backgroundImage : `url(${this.state.eventImages[2]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[2]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='3' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='4'  style={{ backgroundImage : `url(${this.state.eventImages[3]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[3]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='4' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='5'  style={{ backgroundImage : `url(${this.state.eventImages[4]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[4]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='5' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='6'  style={{ backgroundImage : `url(${this.state.eventImages[5]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[5]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='6' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='7'  style={{ backgroundImage : `url(${this.state.eventImages[6]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[6]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='7' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='8'  style={{ backgroundImage : `url(${this.state.eventImages[7]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[7]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='8' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='9'  style={{ backgroundImage : `url(${this.state.eventImages[8]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[8]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='9' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='10'  style={{ backgroundImage : `url(${this.state.eventImages[9]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[9]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='10' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='11'  style={{ backgroundImage : `url(${this.state.eventImages[10]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[10]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='11' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='12'  style={{ backgroundImage : `url(${this.state.eventImages[11]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[11]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='12' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='13'  style={{ backgroundImage : `url(${this.state.eventImages[12]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[12]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='13' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='14'  style={{ backgroundImage : `url(${this.state.eventImages[13]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[13]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='14' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='15'  style={{ backgroundImage : `url(${this.state.eventImages[14]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[14]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='15' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            }
             </>
         )
     }
