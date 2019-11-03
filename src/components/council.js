@@ -5,6 +5,8 @@ import Particles from 'react-particles-js';
 import DhruvImage from '../images/dhruv.jpg';
 import YashiImage from '../images/yashi.jpg';
 import VishalImage from '../images/vishal.jpeg';
+import swarnImage from '../images/swarn.jpg';
+import prateekImage from '../images/prateek.jpg';
 import LalitImage from '../images/lalit.png';
 import lanternImage1 from '../images/lantern1.png';
 import lanternImage2 from '../images/lantern2.png';
@@ -19,7 +21,7 @@ class Council extends React.Component{
 
     componentDidMount(){
         this.myInterval = setInterval(() => {
-            if( this.state.position < 200){
+            if( this.state.position < 400){
                 this.setState({ position: this.state.position + 100})
             }else{
                 this.setState({ position: 0})
@@ -136,13 +138,25 @@ class Council extends React.Component{
                             <img src={VishalImage} alt='Vishal'/>
                             <span className='council-secretary--name'>Vishal Singh</span>
                             <span className='council-secretary--title'>Literery Secretary</span>
-                            <span className='council-secretary--contact'><a href='tel:7704901919'>+91 7704901919</a></span>
+                            <span className='council-secretary--contact'><a href='tel:7704901919'>+91 8115376687</a></span>
+                        </div>
+                        <div className='council-secretary'>
+                            <img src={prateekImage} alt='prateek'/>
+                            <span className='council-secretary--name'>Prateek Singh</span>
+                            <span className='council-secretary--title'>Technical Secretary</span>
+                            <span className='council-secretary--contact'><a href='tel:7704901919'>+91 8542977811</a></span>
                         </div>
                         <div className='council-secretary'>
                             <img src={YashiImage} alt='Yashi'/>
                             <span className='council-secretary--name'>Yashi Rai</span>
                             <span className='council-secretary--title'>Hobby Secretary</span>
                             <span className='council-secretary--contact'><a href='tel:8009048668'>+91 8009048668</a></span>
+                        </div>
+                        <div className='council-secretary'>
+                            <img src={swarnImage} alt='Yashi'/>
+                            <span className='council-secretary--name'>Swarn Srivastava</span>
+                            <span className='council-secretary--title'>Photography Secretary</span>
+                            <span className='council-secretary--contact'><a href='tel:8009048668'>+91 8601296688</a></span>
                         </div>
                     </div>
                 </div>

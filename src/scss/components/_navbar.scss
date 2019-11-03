@@ -109,11 +109,47 @@
                     color: transparent;
                     animation: colorchange 1s linear infinite;
                     transition: 1s all linear;
-                }   
+                    display: block;
+                    position: relative;
+                }  
+                
+                &.special2{
+                    background: rgb(112, 12, 12);
+                    border-radius: 10px;
+                    width: 120px;
+                    margin: 20px auto;
+                    text-decoration: none;
+                    font-size: 24px;
+                    color: white;
+                }
 
                 &:hover{
                     text-decoration: underline;
                     transition: 0.3s all linear;
+
+                    .navbar-text.mr-3{
+                        text-decoration: none;
+                    }
+
+                    &.special2{
+                        text-decoration: none;
+                    }
+                    &.special3{
+                        text-decoration: none;
+                    }
+
+                    
+                }
+
+                &.special3{
+                    text-decoration: none;
+                    margin-bottom: 20px;
+                }
+
+                .navbar-text.mr-3{
+                    font-size: 28px;
+                    text-decoration: none;
+                    color: skyblue;
                 }
             }
         }

@@ -68,23 +68,23 @@ class LoginModal extends Component {
 
   render() {
     return (
-      <div class="test1">
+      <div className="test1">
         <button className="back btn red" onClick={e => history.push("/")}>
           <i className="material-icons">arrow_back</i>
         </button>
-        <div class="container login">
-          <div class="row valign-wrapper">
-            <div class="col s7 offset-s3 valign">
-              <div class="card ">
-                <div class="card-action red white-text">
+        <div className="container login">
+          <div className="row valign-wrapper">
+            <div className="col s7 offset-s3 valign">
+              <div className="card ">
+                <div className="card-action red white-text">
                   <h4>Login Form</h4>
                   {this.state.message ? (
                     <Alert color="danger">{this.state.message}</Alert>
                   ) : null}
                 </div>
-                <div class="card-content">
+                <div className="card-content">
                   <div className="form-field">
-                    <label for="email">Email</label>
+                    <label forhtml="email">Email</label>
                     <input
                       type="email"
                       name="email"
@@ -94,7 +94,7 @@ class LoginModal extends Component {
                   </div>
                   <br />
                   <div className="form-field">
-                    <label for="password">Password</label>
+                    <label forhtml="password">Password</label>
                     <input
                       type="password"
                       name="password"

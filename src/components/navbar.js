@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -19,32 +19,45 @@ class Navbar extends React.Component {
       this.setState({ navClassName: null });
     }
   };
+  onClickLink = () => {
+    this.setState({ navClassName: null });
+  }
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
-    const authLinks = (
-      <Fragment>
-        <li>
+    const authLink1 = (
+      <>
+        <li className='special3' >
           <span className="navbar-text mr-3">
-            <strong>{user ? `Welcome ${user.name}` : ""}</strong>
+            <strong>{user ? `Welcome ${user.name.split(' ')[0]}` : ""}</strong>
           </span>
         </li>
-        <li>
-          <Logout />
-        </li>
-      </Fragment>
+      </>
     );
 
-    const guestLinks = (
-      <Fragment>
-        <Link to="/register" className="link left">
-          <li>Register</li>
+    const authLink2 = (
+      <>
+        <li onClick={this.onClickLink} className='special2'>
+          <Logout />
+        </li>
+      </>
+    );
+
+    const guestLink1 = (
+      <>
+        <Link to="/register" className="link">
+          <li onClick={this.onClickLink} className='special'>Register</li>
         </Link>
-        <Link to="/login" className="link left">
-          <li>Login</li>
+      </>
+    );
+
+    const guestLink2 = (
+      <>
+        <Link to="/login" className="link">
+          <li onClick={this.onClickLink} className='special2'>Login</li>
         </Link>
-      </Fragment>
+      </>
     );
 
     return (
@@ -63,20 +76,22 @@ class Navbar extends React.Component {
             <div className="bar2"></div>
           </div>
           <ul>
-            {isAuthenticated ? authLinks : guestLinks}
+            {isAuthenticated ? authLink1 : guestLink1}
             <Link to="/" className="link">
-              <li>Home</li>
+              <li onClick={this.onClickLink}>Home</li>
             </Link>
             <Link to="/events" className="link">
-              <li>Events</li>
+              <li onClick={this.onClickLink}>Events</li>
             </Link>
             <Link to="/" className="link">
-              <li>Sponsers</li>
+              <li onClick={this.onClickLink}>Sponsers</li>
             </Link>
             <Link to="/" className="link">
-              <li>Team</li>
+              <li onClick={this.onClickLink}>Team</li>
             </Link>
+            {isAuthenticated ? authLink2 : guestLink2}
           </ul>
+
         </div>
       </div>
     );

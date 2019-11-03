@@ -11,6 +11,23 @@
   width: 100vw;
 }
 
+.container.login{
+
+  @media screen and (max-width: 620px){
+    width: 100%;
+    padding: 0;
+
+    .col.s7.offset-s3.valign{
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    .card{
+      width: 100%;
+    }
+  }
+}
+
 .login {
   margin-top: 100px;
 }
