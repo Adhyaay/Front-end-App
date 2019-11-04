@@ -372,6 +372,12 @@ class HobbyEvents extends React.Component{
         
     }
 
+    onCancelClick = () => {
+      this.setState({
+        message: ""
+      });
+    };
+
     onClickEvent = (e) => {
         // console.log(e.target.id);
         this.setState({ event: e.target.id -1})
@@ -430,7 +436,9 @@ class HobbyEvents extends React.Component{
         return(
             <>
             {this.state.viewEvent && 
-                <EventViewer 
+                <EventViewer
+                    cancel={this.onCancelClick}
+                    message={this.state.message} 
                     registration={this.onRegisterClick}
                     back={this.back}
                     next={this.next}

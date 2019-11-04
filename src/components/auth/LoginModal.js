@@ -25,11 +25,26 @@ class LoginModal extends Component {
 
   componentDidMount() {
     M.AutoInit();
+    const options = {
+      inDuration: 250,
+      outDuration: 250,
+      opacity: 0.5,
+      dismissible: false,
+      startingTop: "4%",
+      endingTop: "10%"
+    };
+    M.Modal.init(this.Modal, options);
     const { isAuthenticated } = this.props;
     if (isAuthenticated) {
       history.push("/");
     }
   }
+
+  onCancelClick = () => {
+    this.setState({
+      message: ""
+    });
+  };
 
   componentDidUpdate(prevprops) {
     const { error, isAuthenticated } = this.props;
@@ -72,15 +87,42 @@ class LoginModal extends Component {
         <button className="back btn red" onClick={e => history.push("/")}>
           <i className="material-icons">arrow_back</i>
         </button>
+        <div
+          ref={Modal => {
+            this.Modal = Modal;
+          }}
+          id="modal1"
+          className="modal"
+        >
+          <div className="modal-content" style={{ background: "black" }}>
+            {this.state.message ? (
+              <p style={{ color: "red" }}>{this.state.message}</p>
+            ) : (
+              <p style={{ color: "red" }}>Please Wait</p>
+            )}
+            <br />
+            <div className="row">
+              <div className="col s6 btn-1">
+                <button
+                  href="#"
+                  className="modal-close waves-effect waves-red btn-flat red btn-small"
+                  onClick={this.onCancelClick}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container login">
           <div className="row valign-wrapper">
             <div className="col s7 offset-s3 valign">
               <div className="card ">
                 <div className="card-action red white-text">
                   <h4>Login Form</h4>
-                  {this.state.message ? (
+                  {/* {this.state.message ? (
                     <Alert color="danger">{this.state.message}</Alert>
-                  ) : null}
+                  ) : null} */}
                 </div>
                 <div className="card-content">
                   <div className="form-field">
@@ -104,7 +146,11 @@ class LoginModal extends Component {
                   </div>
                   <br />
                   <div className="form-field center-align">
-                    <button className="btn red" onClick={this.onSubmit}>
+                    <button
+                      className="btn red modal-trigger"
+                      data-target="modal1"
+                      onClick={this.onSubmit}
+                    >
                       Login
                     </button>
                   </div>
