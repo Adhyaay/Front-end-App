@@ -1,9 +1,23 @@
 import React from "react";
+import M from "materialize-css";
 
 //images
 import arrowImage from "../images/arrow.png";
 
 class EventViewer extends React.Component {
+  componentDidMount() {
+    M.AutoInit();
+    const options = {
+      inDuration: 250,
+      outDuration: 250,
+      opacity: 0.5,
+      dismissible: false,
+      startingTop: "4%",
+      endingTop: "10%"
+    };
+    M.Modal.init(this.Modal, options);
+  }
+
   renderCoordinators = () => {
     const length = this.props.coordinator.length;
     return this.props.coordinator.map(el => {
@@ -44,12 +58,43 @@ class EventViewer extends React.Component {
           {" "}
           <img src={arrowImage} alt="back" />{" "}
         </button>
+        <div
+          ref={Modal => {
+            this.Modal = Modal;
+          }}
+          id="modal1"
+          className="modal"
+        >
+          <div className="modal-content" style={{ background: "black" }}>
+            {this.props.message ? (
+              <p style={{ color: "red" }}>{this.props.message}</p>
+            ) : (
+              <p style={{ color: "red" }}>Please Wait</p>
+            )}
+            <br />
+            <div className="row">
+              <div className="col s6 btn-1">
+                <button
+                  href="#"
+                  className="modal-close waves-effect waves-red btn-flat red btn-small"
+                  onClick={this.props.cancel}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="event-viewer--header">
           <div className="event-viewer--header-container">
             <span className="event-viewer--header-container--heading">
               {this.props.name}
             </span>
-            <button className="register" onClick={this.props.registration}>
+            <button
+              className="register modal-trigger"
+              data-target="modal1"
+              onClick={this.props.registration}
+            >
               Register
             </button>
           </div>
@@ -110,7 +155,11 @@ class EventViewer extends React.Component {
         )}
         <div className="event-viewer--links">
           <div className="event-viewer--links-register">
-            <button className="register" onClick={this.props.registration}>
+            <button
+              className="register modal-trigger"
+              data-target="modal1"
+              onClick={this.props.registration}
+            >
               Register
             </button>
           </div>

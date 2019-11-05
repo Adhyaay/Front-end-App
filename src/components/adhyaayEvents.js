@@ -241,6 +241,13 @@ class AdhyaayEvents extends React.Component{
         document.querySelector('.event-viewer').scrollTo(0,0);
     }
 
+    onCancelClick = () => {
+      this.setState({
+        message: ""
+      });
+    };
+  
+
     onRegisterClick = () => {
         const { isAuthenticated, user } = this.props;
     
@@ -272,6 +279,8 @@ class AdhyaayEvents extends React.Component{
             <>
             {this.state.viewEvent && 
                 <EventViewer 
+                    cancel={this.onCancelClick}
+                    message={this.state.message}
                     registration={this.onRegisterClick} 
                     back={this.back}
                     next={this.next}

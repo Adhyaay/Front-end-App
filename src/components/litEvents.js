@@ -34,218 +34,218 @@ class LitEvents extends React.Component{
             viewEvent: false,
             event: null,
             eventImages: [bakhanImage, bangTheBenchImage, chitrVichitrImage, jamImage, jinglingImage, kavyamayImage, litratiImage, naziWolfImage, netaImage, posterImage, professorImage, quizImage, situationReactionImage, slamPoetryImage, turnCoatImage],
-            eventNames: ['Bakhan', 'Bang The Bench', 'Chitr Vichitr', 'JAM', 'Jingling', 'Kavyamay', 'Mr. & Ms. Litrati', 'Nazi Wolf', 'Hmara Neta Kaisa Ho', 'Poster Presentation', 'Potential Professor', 'Quizes', 'Situation Reaction', 'Poesy Pinnacle', 'Turn Coat'],
+            eventNames: ['Bakhan', 'ARGUE-MENTAL', 'Chitr Vichitr', 'JAM', 'Jingling', 'Kavyamay', 'Mr. & Ms. Litrati', 'Nazi Wolf', 'Hmara Neta Kaisa Ho', 'Poster Presentation', 'Potential Professor', 'Quizes', 'Situation Reaction', 'Poesy Pinnacle', 'Turn Coat'],
             eventVenue: ['G-series', 'Civil seminar hall', 'FT Seminar Hall', 'Auditorium', '-', '-', 'Civil seminar hall', '-', 'BE Seminar Hall', '-', 'G- Series', '-', '-', 'Auditorium', '-'],
             eventCoordinators:[
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "7651858027"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "9696619364"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "8052511598"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "8707851552"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // },
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "7355116512"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7388054780"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "7651858027"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "9532296189"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "8707851552"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "8707851552"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9649470333"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "9696619364"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "8052511598"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9140291877"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "8004803548"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7355116512"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "9696619364"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ],
                 [
                     {
                       name: "Contact:",
-                      phone: "123456789"
+                      phone: "7355116512"
                     },
                     {
                       name: "Contact",
-                      phone: "123456789"
-                    },
-                    {
-                      name: "Contact",
-                      phone: "123456789"
+                      phone: "7651858027"
                     }
+                    // {
+                    //   name: "Contact",
+                    //   phone: "123456789"
+                    // }
                 ]
 
             ],
@@ -320,6 +320,12 @@ class LitEvents extends React.Component{
         
     }
 
+    onCancelClick = () => {
+      this.setState({
+        message: ""
+      });
+    };
+
     onClickEvent = (e) => {
         // console.log(e.target.id);
         this.setState({ event: e.target.id -1})
@@ -379,7 +385,9 @@ class LitEvents extends React.Component{
         return(
             <>
             {this.state.viewEvent && 
-                <EventViewer  
+                <EventViewer
+                    cancel={this.onCancelClick}
+                    message={this.state.message} 
                     registration ={this.onRegisterClick}
                     back={this.back}
                     next={this.next}
