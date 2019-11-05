@@ -56,6 +56,10 @@ class Events extends React.Component {
 
   render() {
     return (
+      <>
+      <button className="back-button" onClick={e => history.push("/")}>
+          <i className="material-icons">arrow_back</i>
+        </button>
       <div className="events-page">
         <div
           className={`councils ${this.state.className}`}
@@ -139,6 +143,7 @@ class Events extends React.Component {
           </div>
         </div>
       </div>
+      </>
     );
   }
 }

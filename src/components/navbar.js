@@ -84,7 +84,7 @@ class Navbar extends React.Component {
               <li onClick={this.onClickLink}>Events</li>
             </Link>
             <Link to="/" className="link">
-              <li onClick={this.onClickLink}>Sponsers</li>
+              <li onClick={this.onClickLink}>Sponsors</li>
             </Link>
             <Link to="/" className="link">
               <li onClick={this.onClickLink}>Team</li>

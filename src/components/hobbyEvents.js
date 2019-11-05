@@ -354,7 +354,6 @@ class HobbyEvents extends React.Component{
       if(window.innerWidth > 620){
         const position = this.targetFirst.current.scrollTop;
         if(this.state.scrollPosition !== position ){
-            console.log(this.state.scrollPosition);
             this.scroller.current.scrollTo(0, this.state.scrollPosition);
             this.targetFirst.current.scrollTo(0, this.state.scrollPosition);
             this.targetSecond.current.scrollTo(0, this.state.scrollPosition);
@@ -413,7 +412,8 @@ class HobbyEvents extends React.Component{
             email: user.email,
             event: this.state.eventNames[this.state.event],
             mainevent: 'hobby',
-            name: user.name
+            name: user.name,
+            phone: user.phone
           })
           .then(function(res) {
             self.setState({

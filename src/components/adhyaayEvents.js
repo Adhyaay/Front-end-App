@@ -80,16 +80,16 @@ class AdhyaayEvents extends React.Component{
                   ],
                   [
                     {
-                      name: "Adishree",
-                      phone: "9598644255"
+                      name: "Yogendra Pal",
+                      phone: "9149030038"
                     },
                     {
-                      name: "Priyanshu",
-                      phone: "8756645595"
+                      name: "Navneet Mishra",
+                      phone: "9651872526"
                     },
                     {
-                      name: "Kanchan",
-                      phone: "8299740931"
+                      name: "Bhawna Golani",
+                      phone: "8604615903"
                     }
                   ],
                   [
@@ -253,7 +253,8 @@ class AdhyaayEvents extends React.Component{
               email: user.email,
               event: this.state.eventNames[this.state.event],
               mainevent: 'adhyaay',
-              name: user.name
+              name: user.name,
+              phone: user.phone
             })
             .then(function(res) {
               self.setState({

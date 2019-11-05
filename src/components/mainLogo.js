@@ -18,7 +18,6 @@ class MainLogo extends React.Component {
         this.setState({ position: this.props.position})
         const pageHeight = Math.min(this.props.height, window.innerHeight);
         let scrollTop = this.props.position ;
-        console.log(pageHeight, scrollTop);
             if(scrollTop > 100){
                 this.setState({
                     addClassName: 'logo aside'

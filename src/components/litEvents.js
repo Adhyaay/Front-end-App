@@ -361,7 +361,8 @@ class LitEvents extends React.Component{
               email: user.email,
               event: this.state.eventNames[this.state.event],
               mainevent: 'literary',
-              name: user.name
+              name: user.name,
+              phone: user.phone
             })
             .then(function(res) {
               self.setState({

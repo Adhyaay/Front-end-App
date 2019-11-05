@@ -65,7 +65,7 @@ class EventViewer extends React.Component {
           <div className="event-viewer--about-details-wrapper">
             <div className="event-viewer--about-details-wrapper-details">
               <span className="event-viewer--about-details-wrapper-details-value">
-                09-11-2019
+                Will Update Soon
               </span>
               <span className="event-viewer--about-details-wrapper-details-name">
                 Date
@@ -81,7 +81,7 @@ class EventViewer extends React.Component {
             </div>
             <div className="event-viewer--about-details-wrapper-details">
               <span className="event-viewer--about-details-wrapper-details-value">
-                09:00
+              Will Update Soon
               </span>
               <span className="event-viewer--about-details-wrapper-details-name">
                 Time

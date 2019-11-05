@@ -129,7 +129,7 @@
         margin: 0;
 
         @media screen and (max-width: 620px){
-            height: 110vh;
+            height: 105vh;
         }
 
         &-heading{
@@ -232,7 +232,7 @@
             }
 
             @media screen and (max-width: 620px){
-                padding-top: 15px;
+                padding-top: 0px;
                 font-size: 30px;
             }
         }
@@ -241,7 +241,7 @@
             width: 80%;
             position: relative;
             display: block;
-            margin: 100px auto;
+            margin: 70px auto;
                 
 
             &-coordinator{
