@@ -57,7 +57,7 @@ class Events extends React.Component {
   render() {
     return (
       <>
-      <button className="back-button" onClick={e => history.push("/")}>
+      <button className="back-button" onClick={e => history.goBack()}>
           <i className="material-icons">arrow_back</i>
         </button>
       <div className="events-page">

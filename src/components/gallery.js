@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { useSwipeable, Swipeable } from 'react-swipeable';
 
 //images
 import testImage0 from '../images/galleryImage1.jpg';
@@ -75,6 +76,24 @@ class Gallery extends React.Component{
         }
     }
 
+    onSwipeLeft = () => {
+        if( this.state.id< 6){
+            const newPosition = 50 - ((parseInt(this.state.id)+1)*10);
+            this.setState({ position: newPosition, id: this.state.id + 1});
+        }
+        else{
+            const newPosition = 50;
+            this.setState({ position: newPosition, id: 0});
+        }
+    }
+
+    onSwipeRight = () => {
+        if( this.state.id > 0){
+            const newPosition = 50 - ((parseInt(this.state.id)-1)*10);
+            this.setState({ position: newPosition, id: this.state.id - 1});
+        }
+    }
+
     render(){
         return(
             <>
@@ -139,10 +158,22 @@ class Gallery extends React.Component{
                 Gallery
             </div>
             <div className='gallery-wrapper'>
+                
                 <div className='gallery-preview' >
-
+                <Swipeable 
+                    onSwipedRight={(event) => {
+                        console.log('swiped')
+                        this.onSwipeRight();
+                    }}
+                    onSwipedLeft={(event) => {
+                        console.log('swiped')
+                        this.onSwipeLeft();
+                    }}
+                >
                     <img src={this.state.images[this.state.id]} alt='gallery' />
+                    </Swipeable>
                 </div>
+                
                 <div className='gallery-items'>
                     <div className='gallery-items--container' style={{ left: `${this.state.position}%`, transition: '0.3s all linear'}} >
                         <div className={`gallery-items--container-item ${this.state.id === 0 ? 'selected' : null}`} onClick={this.onClickDiv} >

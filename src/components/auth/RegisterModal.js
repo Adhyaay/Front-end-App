@@ -96,7 +96,7 @@ class registerModal extends Component {
   render() {
     return (
       <div className="test2">
-        <button className="back btn blue" onClick={e => history.push("/")}>
+        <button className="back btn blue" onClick={e => history.goBack()}>
           <i className="material-icons">arrow_back</i>
         </button>
         <div className="container login">
@@ -241,6 +241,9 @@ class registerModal extends Component {
                       </option>
                       <option value="Civil Engineeering" name="branch">
                         Civil Engineeering
+                      </option>
+                      <option value="MCA" name="branch">
+                        MCA
                       </option>
                     </select>
                   </div>

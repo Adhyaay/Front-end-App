@@ -318,6 +318,27 @@ class HobbyEvents extends React.Component{
                 "Come and show your knowledge in fields of movies, sports, science, TV series and much more. It will be a quiz competition with more fun and twists and tasks",
                 "Participants (team of 6) are provided with a rope with a line of reference. The team who drags the opposite team in their area wins and proceeds further for the final round. Don't forget to plant your feet and pull until your last breath."
       
+            ],
+            eventNote:[
+              " This is a Team Event. A Team of 3 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 2 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              ,
+              " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 6 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              ,
+              ,
+              ,
+              " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              ,
+              " Individual or Team Event. you can also make onSpot Teams",
+              ,
+              " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 3 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              ,
+              " This is a Team Event. A Team of 6 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              
             ]
 
 
@@ -333,13 +354,14 @@ class HobbyEvents extends React.Component{
         //     }
         // }, 10);
       if(window.innerWidth > 620){
+        const height = document.querySelector('.fixed-div').clientHeight;
         this.myInterval = setInterval( () => {
             if(this.state.scrollPosition !== this.scroller.current.scrollTop){
-                if(this.state.scrollPosition < this.scroller.current.scrollTop){
-                this.setState({ scrollPosition: this.state.scrollPosition + window.innerHeight })
+                if(this.state.scrollPosition < this.scroller.current.scrollTop - 100){
+                this.setState({ scrollPosition: this.state.scrollPosition + height })
                 }
                 else if(this.state.scrollPosition > this.scroller.current.scrollTop){
-                    this.setState({ scrollPosition: this.state.scrollPosition - window.innerHeight })
+                    this.setState({ scrollPosition: this.state.scrollPosition - height })
                 }
             }
         }, 1000);
@@ -447,7 +469,8 @@ class HobbyEvents extends React.Component{
                     name={this.state.eventNames[this.state.event]} 
                     venue={this.state.eventVenue[this.state.event]} 
                     coordinator={this.state.eventCoordinators[this.state.event]} 
-                    description={this.state.eventDescription[this.state.event]}
+                    description={this.state.eventDescription[this.state.event]} 
+                    note={this.state.eventNote[this.state.event]}
                 />}
             { window.innerWidth > 620 ?
             <div className='events-wrapper' >

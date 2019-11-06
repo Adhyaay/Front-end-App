@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Alert } from "reactstrap";
+import { Link } from 'react-router-dom';
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -36,15 +37,9 @@ class LoginModal extends Component {
     M.Modal.init(this.Modal, options);
     const { isAuthenticated } = this.props;
     if (isAuthenticated) {
-      history.push("/");
+      history.goBack();
     }
   }
-
-  onCancelClick = () => {
-    this.setState({
-      message: ""
-    });
-  };
 
   componentDidUpdate(prevprops) {
     const { error, isAuthenticated } = this.props;
@@ -63,6 +58,12 @@ class LoginModal extends Component {
       history.push("/");
     }
   }
+
+  onCancelClick = () => {
+    this.setState({
+      message: ""
+    });
+  };
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -84,7 +85,7 @@ class LoginModal extends Component {
   render() {
     return (
       <div className="test1">
-        <button className="back btn red" onClick={e => history.push("/")}>
+        <button className="back btn red" onClick={e => history.goBack()}>
           <i className="material-icons">arrow_back</i>
         </button>
         <div
@@ -146,13 +147,16 @@ class LoginModal extends Component {
                   </div>
                   <br />
                   <div className="form-field center-align">
-                    <button
+                  <button
                       className="btn red modal-trigger"
                       data-target="modal1"
                       onClick={this.onSubmit}
                     >
                       Login
                     </button>
+                  </div>
+                  <div className='register-button'>
+                    Don't have account? <Link className='link register' to='/register'>Register Now</Link>
                   </div>
                   <br />
                 </div>
@@ -165,10 +169,13 @@ class LoginModal extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  console.log(state)
+  return({
   isAuthenticated: state.auth.isAuthenticated,
   error: state.error
 });
+}
 
 export default connect(
   mapStateToProps,

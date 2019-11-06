@@ -24,7 +24,6 @@ class Home extends React.Component {
 
     componentDidMount() {
         const wrappedElement = document.querySelector('.fullpage-wrapper');
-        console.log(wrappedElement.style.transform.split(',')[1].split('p')[0]);
         this.myInterval = setInterval( () => {
             if(this.state.scrollPosition !== parseInt(wrappedElement.style.transform.split(',')[1].split('p')[0])){
             this.setState({ scrollPosition: parseInt(wrappedElement.style.transform.split(',')[1].split('p')[0])})

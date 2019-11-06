@@ -175,13 +175,16 @@ class AdhyaayEvents extends React.Component{
         //     }
         // }, 10);
         if(window.innerWidth > 620){
+            const height = document.querySelector('.fixed-div').clientHeight;
+            console.log(height)
             this.myInterval = setInterval( () => {
                 if(this.state.scrollPosition !== this.scroller.current.scrollTop){
-                    if(this.state.scrollPosition < this.scroller.current.scrollTop){
-                    this.setState({ scrollPosition: this.state.scrollPosition + window.innerHeight })
+                    if((this.state.scrollPosition  ) < this.scroller.current.scrollTop - 100){
+                    this.setState({ scrollPosition: this.state.scrollPosition + height })
+                    
                     }
-                    else{
-                        this.setState({ scrollPosition: this.state.scrollPosition - window.innerHeight })
+                    else if((this.state.scrollPosition ) > this.scroller.current.scrollTop){
+                        this.setState({ scrollPosition: this.state.scrollPosition - height })
                     }
                 }
             }, 1000);

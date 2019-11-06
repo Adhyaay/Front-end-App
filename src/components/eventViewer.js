@@ -1,8 +1,10 @@
 import React from "react";
 import M from "materialize-css";
+import { useSwipeable, Swipeable } from 'react-swipeable';
 
 //images
 import arrowImage from "../images/arrow.png";
+import arrowDownImage from '../images/arrow-down.png';
 
 class EventViewer extends React.Component {
   componentDidMount() {
@@ -50,6 +52,16 @@ class EventViewer extends React.Component {
 
   render() {
     return (
+      <Swipeable 
+          onSwipedRight={(event) => {
+            console.log('swiped')
+            this.props.previous();
+          }}
+          onSwipedLeft={(event) => {
+            console.log('swiped')
+            this.props.next();
+          }}
+        >
       <div
         className="event-viewer"
         style={{ backgroundImage: `url(${this.props.image})` }}
@@ -86,6 +98,7 @@ class EventViewer extends React.Component {
           </div>
         </div>
         <div className="event-viewer--header">
+        
           <div className="event-viewer--header-container">
             <span className="event-viewer--header-container--heading">
               {this.props.name}
@@ -97,8 +110,13 @@ class EventViewer extends React.Component {
             >
               Register
             </button>
+            <div className='arrow-down'>
+              <img src={arrowDownImage} alt='Down' />
+            </div>
           </div>
+         
         </div>
+      
         <div className="event-viewer--about">
           <span className="event-viewer--about-heading">
             About{" "}
@@ -147,9 +165,9 @@ class EventViewer extends React.Component {
         </div>
         {this.props.note && (
           <div className="event-viewer--note">
-            <span className="event-viewer--note-heading">Note :</span>
+            <span className="event-viewer--note-heading">Note : </span>
             <span className="event-viewer--note-content">
-              {this.props.note}
+               {this.props.note}
             </span>
           </div>
         )}
@@ -173,6 +191,7 @@ class EventViewer extends React.Component {
           </div>
         </div>
       </div>
+      </Swipeable>
     );
   }
 }

@@ -32,27 +32,55 @@
   }
 
   .login .card {
-    background: rgba(0, 0, 0, 0.6);
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .form-field{
+    position: relative;
   }
   .login label {
     font-size: 16px;
-    color: #ccc;
+    color: rgb(122, 122, 122);
+
   }
+
   .login input {
     font-size: 22px !important;
-    color: #ccc;
+    color: rgb(48, 48, 48);
   }
-  .login button:hover {
-    padding: 0px 40px;
-    transition-duration: inherit;
+
+
+  .login button{
+    width: 100px;
+    transition: 0.5s all ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .back {
+    width: 50px;
+    height: 50px;
     position: absolute;
     margin-left: 30px;
     margin-top: 30px;
     border-radius: 80px;
     top: 0;
     left: 0;
+    color: black;
+    background: white !important;
+    border-radius: 50%;
+
+    @media screen and (max-width: 620px) {
+      width: 40px;
+      height: 40px;
+      // top: 30px;
+      // left: 20px;
+      padding: 0;
+      margin-left: 20px;
+    }
   }
 
   .ml1 {
@@ -89,4 +117,18 @@
   .ml1 .line2 {
     bottom: 0;
   }
+}
+
+.register-button{
+  text-align: center;
+  float: center;
+  color: rgb(78, 78, 78);
+  margin-top: 30px;
+  
+
+  .register{
+    color: red;
+  }
+
+  
 }

@@ -15,7 +15,6 @@ import {
 //   Check token and load user
 export const loadUser = () => (dispatch, getState) => {
   // user loading
-  console.log("hii");
   dispatch({ type: USER_LOADING });
 
   axios
