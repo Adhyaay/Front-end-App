@@ -29,8 +29,8 @@ class GameOfCodesEvents extends React.Component{
             event: null,
             eventImages: [breakTheCodeImage, dazzelCodeImage, NCLImage, programingDateImage, RasterizeImage, redPencilImage, swapifyImage],
             eventNames: ['Break The Code', 'Dazzle Code', 'NCL', "Programming Date", 'Rasterize', 'Red Pencil', 'Swapify'],
-            eventTime: ['10:30 AM', '3:00 PM & 1:00 PM', '9:00 PM & 2:30 PM', '11:00 AM', '11:00 AM', '1:30 PM', '9:00 AM'],
-            eventDate: ['Day 1', 'Day 1 & Day 2', 'Day 2', '08/11 & Day 2', 'Day 2', 'Day 1', 'Day 3'],
+            eventTime: ['10:30 AM', '3:00 PM & 1:00 PM', '9:00 PM & 2:30 PM', '2:00 PM', '11:45 AM', '2:00 PM', '12:00 PM'],
+            eventDate: ['Day 1', 'Day 1 & Day 2', '08/11 & Day 2', 'Day 3', 'Day 2', 'Day 1','Day 3'],
             eventVenue: ['CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.'],
             eventCoordinators:[
                 [
@@ -45,7 +45,11 @@ class GameOfCodesEvents extends React.Component{
                     {
                       name: "Shubham Athwani",
                       phone: "8707545977"
-                    }
+                    },
+                    {
+                        name: "Animesh Shukla",
+                        phone: "9473999609"
+                      }
                   ],
                   [
                     {
@@ -59,6 +63,10 @@ class GameOfCodesEvents extends React.Component{
                     {
                       name: "Kajal Shukla",
                       phone: "9415259115"
+                    },
+                    {
+                        name: "Aviral Bajpai",
+                        phone: "7905463658"
                     }
                   ],
                   [
@@ -73,6 +81,10 @@ class GameOfCodesEvents extends React.Component{
                       {
                         name: "Abhishek verma",
                         phone: "8112242035"
+                      },
+                      {
+                          name: "Yatharth Maheshwari",
+                          phone: "9756361188"
                       }
                   ],
                   [
@@ -115,6 +127,10 @@ class GameOfCodesEvents extends React.Component{
                       {
                           name: 'Saurabh',
                           phone: '8299844808'
+                      },
+                      {
+                          name: "Varun",
+                          phone: "6394211050"
                       }
                   ],
                   [
@@ -129,6 +145,10 @@ class GameOfCodesEvents extends React.Component{
                       {
                           name: 'Dhairy tripathi',
                           phone: '9936790544'
+                      },
+                      {
+                          name: "Vasu Agarwal",
+                          phone: "9455077270"
                       }
                   ]
             ],

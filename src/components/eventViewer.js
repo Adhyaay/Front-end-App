@@ -205,6 +205,10 @@ class EventViewer extends React.Component {
               
             </button>}
           </div>
+          {this.props.sponsor && <div className='event-viewer--links-sponsor'>
+            Event Sponsor:
+            <img src={this.props.sponsor} alt='sponsor' />
+          </div>}
           <div className="event-viewer--links-events">
             <button className="previous" onClick={this.props.previous}>
               Previous

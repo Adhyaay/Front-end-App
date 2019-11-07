@@ -25,22 +25,26 @@ class CentralStageEvents extends React.Component{
             event: null,
             eventImages: [breakTheCodeImage, dazzelCodeImage, NCLImage],
             eventNames: ['Smart City', 'Tech Expo', 'Think Before Throw'],
-            eventTime: ['1:30 PM & 2:30 PM', '8:30 AM', '-'],
-            eventDate: ['Day 2 & Day 3', 'Day 3', '-'],
-            eventVenue: ['Civil Dept.', 'Main Building', 'Civil Dept.'],
+            eventTime: ['1:30 PM & 2:30 PM', '8:30 AM', '10:00 AM'],
+            eventDate: ['Day 2 & Day 3', 'Day 3', 'Day 2'],
+            eventVenue: ['Civil Dept.', 'Main Building', 'BE/FT Lawn'],
             eventCoordinators:[
                 [
                     {
-                      name: "Rohit Yadav",
-                      phone: "9793626076"
+                      name: "ShivSagar Singh",
+                      phone: "7355182778"
                     },
                     {
-                      name: "Uvansh Srivastava",
+                      name: "Omansh Srivastava",
                       phone: "8303899558"
                     },
                     {
                       name: "Shubhangi Rathi",
                       phone: "838488107"
+                    },
+                    {
+                        name:"Astha Kapoor",
+                        phone:"8887814979"
                     }
                   ],
                   [
@@ -55,9 +59,17 @@ class CentralStageEvents extends React.Component{
                     {
                       name: "Ajit Singh",
                       phone: "7351987812"
+                    },
+                    {
+                        name:"Aman Kumar Gond",
+                        phone:"9169202070"
                     }
                   ],
                   [
+                    {
+                        name: "Saloni Maurya",
+                        phone: "8840722481"
+                    },
                     {
                         name: "Vinay Kr. Tiwari",
                         phone: "8173943642"
@@ -65,11 +77,7 @@ class CentralStageEvents extends React.Component{
                       {
                         name: "Tanya Gupta",
                         phone: "9260982358"
-                      },
-                    {
-                      name: "Saloni Maurya",
-                      phone: "8840722481"
-                    }
+                      }
                   ]
             ],
             eventDescription:[

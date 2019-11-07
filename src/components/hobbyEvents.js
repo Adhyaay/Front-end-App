@@ -434,7 +434,7 @@ class HobbyEvents extends React.Component{
     }
 
     next = () => {
-        if(this.state.event < 18){
+        if(this.state.event < 19){
             this.setState({ event: this.state.event +1 })
         }
         document.querySelector('.event-viewer').scrollTo(0,0);

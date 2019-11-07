@@ -240,7 +240,7 @@ class AdhyaayEvents extends React.Component{
     }
 
     next = () => {
-        if(this.state.event < 8){
+        if(this.state.event < 9){
             this.setState({ event: this.state.event +1 })
         }
         document.querySelector('.event-viewer').scrollTo(0,0);
@@ -342,6 +342,15 @@ class AdhyaayEvents extends React.Component{
                     </div>
                     <div className='events-section' >
                         <div className='events-section--container' ref={this.targetSecond} >
+                        <div className='section' id='10' style={{ backgroundImage : `url(${this.state.eventImages[9]})`}}>
+                                <div className='section-content' >
+                                <div className='section-content--title'>{this.state.eventNames[9]}</div>
+                                
+                            </div>
+                            <div className='button' onClick={this.onClickEvent}>
+                                <button id='10' onClick={this.viewEvent}>View Event</button>
+                            </div>
+                            </div>
                             <div className='section' id='8' style={{ backgroundImage : `url(${this.state.eventImages[7]})`}}>
                                 <div className='section-content' >
                                 <div className='section-content--title'>Dance Face Off</div>

@@ -25,9 +25,9 @@ class DiversosEvents extends React.Component{
             event: null,
             eventImages: [breakTheCodeImage, dazzelCodeImage, NCLImage],
             eventNames: ['Chemcar', 'Junkyards', 'Laser-O-Reflect'],
-            eventTime: ['7:30 AM', '9:00 AM', '10:00 AM'],
-            eventDate: ['Day 2', 'Day 2', 'Day 1'],
-            eventVenue: ['Tennis Ground', 'Civil Dept.', 'Civil Dept.'],
+            eventTime: ['7:30 AM', '9:00 AM', '4:30 PM'],
+            eventDate: ['Day 3', 'Day 2', 'Day 1'],
+            eventVenue: ['Lawn Tennis Ground', 'Civil Dept.', 'Civil Dept.'],
             eventCoordinators:[
                 [
                     {
@@ -41,6 +41,10 @@ class DiversosEvents extends React.Component{
                     {
                       name: "Dharmendra Verma",
                       phone: "9161023600"
+                    },
+                    {
+                        name: "Devesh Barnwal",
+                        phone: "6387552878"
                     }
                   ],
                   [
@@ -53,13 +57,17 @@ class DiversosEvents extends React.Component{
                       phone: "9628866885"
                     },
                     {
-                      name: "Nikita ch.",
+                      name: "Nikita Chaudhary",
                       phone: "9412226665"
+                    },
+                    {
+                        name:"Anshika Pathak",
+                        phone:"7007681842"
                     }
                   ],
                   [
                     {
-                      name: "Siddhart Sachan",
+                      name: "Siddhartha Sachan",
                       phone: "8960398300"
                     },
                     {
@@ -67,12 +75,8 @@ class DiversosEvents extends React.Component{
                       phone: "8840036900"
                     },
                     {
-                      name: "Kirti Yadav",
-                      phone: "8787065138"
-                    },
-                    {
-                        name: "Subham Nayak",
-                        phone: "9792216897"
+                      name: "Anil Chaturvedi",
+                      phone: "7007031417"
                     }
                   ]
             ],

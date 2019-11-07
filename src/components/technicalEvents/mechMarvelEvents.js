@@ -27,8 +27,8 @@ class MechMarvelEvents extends React.Component{
             event: null,
             eventImages: [aeronaveImage, armageddonImage, blazingWheelImage, freeFlyImage, waterRocketImage],
             eventNames: ['Aeronave', 'Armageddon', 'Blazing Wheels', "Free Fly", 'Water Rocket'],
-            eventTime: ['9:30 AM', '4:30 PM/4:00 PM', '1:00 PM', '8:30 AM', '7:00 AM'],
-            eventDate: ['Day 1', 'Day 2 & Day 3', 'Day 2', 'Day 1', 'Day 1'],
+            eventTime: ['9:30 AM', '4:15 PM & 4:00 PM', '11:45', '8:30 AM & 8:30 AM', '7:00 AM & 7:00 AM'],
+            eventDate: ['Day 1', 'Day 2 & Day 3', 'Day 2', 'Day 1 & Day 2', 'Day 1 & Day 2'],
             eventVenue: ['Ramanujan Ground', 'Tennis Ground', 'Behind Auditorium', 'Ramanujan Ground', 'Ramanujan Ground', 'Auditorium', 'Auditorium', '-', '-'],
             eventCoordinators:[
                 [
@@ -37,17 +37,17 @@ class MechMarvelEvents extends React.Component{
                       phone: "9599304977"
                     },
                     {
-                      name: "Aayush Agarwal",
-                      phone: "7355727646"
+                      name: "Deepshikha Singh",
+                      phone: "6306965078"
                     },
                     {
-                      name: "Deepsikha Singh",
-                      phone: "6306965078"
+                      name: "Mayank Singh",
+                      phone: "9120067347"
                     }
                   ],
                   [
                     {
-                      name: "Piyush Verma",
+                      name: "Pyush Verma",
                       phone: "8318690201"
                     },
                     {
@@ -69,8 +69,8 @@ class MechMarvelEvents extends React.Component{
                       phone: "7007019667"
                     },
                     {
-                      name: "Rinku Yadav",
-                      phone: "7374092573"
+                      name: "Dinesh Kumar",
+                      phone: "7889762928"
                     },
                     {
                       name: "Manish Yadav",
@@ -91,8 +91,8 @@ class MechMarvelEvents extends React.Component{
                       phone: "7355928864"
                     },
                     {
-                      name: "Mayank Singh",
-                      phone: "9120067347"
+                      name: "Nidhish Kumar Sharma",
+                      phone: "8004677491"
                     }
                   ],
                   [
@@ -109,8 +109,8 @@ class MechMarvelEvents extends React.Component{
                       phone: "8429354661"
                     },
                     {
-                      name: "Vivek Maurya",
-                      phone: "7880966406"
+                      name: "Anjali Prakash",
+                      phone: "6392968485"
                     }
                   ]
             ],

@@ -16,6 +16,7 @@ import hoverManiaImage from '../../images/electromania/hover-mania.jpeg';
 import lFRImage from '../../images/electromania/LFR.jpeg';
 import manoeuvreImage from '../../images/electromania/manoeuvre.jpeg';
 import roboSoccerImage from '../../images/electromania/robo-soccer.jpeg';
+import LFRSponsorImage from '../../images/sponsors/lfr-sponsor.jpeg';
 
 class ElectromaniaEvents extends React.Component{
     scroller = React.createRef();
@@ -27,10 +28,11 @@ class ElectromaniaEvents extends React.Component{
             viewEvent: false,
             event: null,
             eventImages: [anadigilogixImage, circuitronImage, hoverManiaImage, lFRImage, manoeuvreImage, roboSoccerImage],
+            eventSponsor:[ , , , LFRSponsorImage, , ,],
             eventNames: ['Anadigilogix', 'Circuitron', 'Hovermania', "LFR", 'Manoeuvre', 'Robo Soccer'],
-            eventTime: ['1:00 PM/2:00 PM', '3:00 PM', '2:30 PM', '12:00 PM', '3:30 PM', '5:30 PM'],
-            eventDate: ['Day 1 & Day 2', 'Day 2', 'Day 2', 'Day 2', 'Day 1', 'Day 1'],
-            eventVenue: ['Electronics Dept.', 'Electronics Dept.', 'Garden of Bliss', 'Electronics Dept.', 'Garden of Bliss', 'Garden of Bliss'],
+            eventTime: ['1:30 PM & 2:00 PM', '3:00 PM & 3:15 PM', '1:00 PM', '11:00 AM', '12:30 PM', '2:30 PM'],
+            eventDate: ['Day 1 & Day 2', 'Day 1 & Day 2', 'Day 3', 'Day 1', 'Day 2', 'Day 2'],
+            eventVenue: ['Electronics Dept.', 'Electronics Dept.', 'Garden of Bliss', 'Civil Dept.', 'Garden of Bliss', 'Garden of Bliss'],
             eventCoordinators:[
                 [
                     {
@@ -48,7 +50,7 @@ class ElectromaniaEvents extends React.Component{
                   ],
                   [
                     {
-                      name: "Somya Sharma",
+                      name: "Saumya Sharma",
                       phone: "7905019146"
                     },
                     {
@@ -62,7 +64,7 @@ class ElectromaniaEvents extends React.Component{
                   ],
                   [
                     {
-                      name: "Armaan",
+                      name: "Aryaman Gupta",
                       phone: "9682650783"
                     },
                     {
@@ -90,6 +92,10 @@ class ElectromaniaEvents extends React.Component{
                     {
                       name: "Sagar Gupta",
                       phone: "8707420418"
+                    },
+                    {
+                        name: "Apratim Shivansh",
+                        phone: "7309279669"
                     }
                   ],
                   [
@@ -122,6 +128,10 @@ class ElectromaniaEvents extends React.Component{
                       {
                           name: 'Vidit Karan Bhargava',
                           phone: '8383842036'
+                      },
+                      {
+                          name: "Utkarsh Sonkar",
+                          phone: "9695035579"
                       }
                   ]
             ],
@@ -305,6 +315,7 @@ class ElectromaniaEvents extends React.Component{
                     description={this.state.eventDescription[this.state.event]}
                     date={this.state.eventDate[this.state.event]} 
                     time={this.state.eventTime[this.state.event]}
+                    sponsor={this.state.eventSponsor[this.state.event]}
                 />}
             {
             window.innerWidth > 620 ?

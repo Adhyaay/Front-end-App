@@ -142,7 +142,7 @@ class Council extends React.Component {
                 <img src={VishalImage} alt="Vishal" />
                 <span className="council-secretary--name">Vishal Singh</span>
                 <span className="council-secretary--title">
-                  Literery Secretary
+                  Literary Secretary
                 </span>
                 <span className="council-secretary--contact">
                   <a href="tel:7704901919">+91 8115376687</a>

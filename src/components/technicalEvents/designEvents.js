@@ -25,9 +25,9 @@ class DesignEvents extends React.Component{
             event: null,
             eventImages: [breakTheCodeImage, dazzelCodeImage, NCLImage],
             eventNames: ['Bridge It Up', 'City Maestro', 'Egg Drop Challenge'],
-            eventTime: ['12:00 PM', '-', '10:00 AM'],
-            eventDate: ['Day 1', '-', 'Day 1'],
-            eventVenue: ['Civil Dept.', 'Civil Dept.', 'Infront of DSW Office'],
+            eventTime: ['10:00 AM', '-', '12:00 PM & 12:00 PM'],
+            eventDate: ['Day 1', '-', 'Day 1 & Day 2'],
+            eventVenue: ['Main Building', '-', 'Infront of DSW Office'],
             eventCoordinators:[
                 [
                     {
@@ -39,15 +39,11 @@ class DesignEvents extends React.Component{
                       phone: "7235890260"
                     },
                     {
-                      name: "Amrisha Srivastva",
+                      name: "Amrisha Srivastava",
                       phone: "9870798930"
                     }
                   ],
                   [
-                    {
-                      name: "Rahil Ushmani",
-                      phone: "9519970808"
-                    },
                     {
                       name: "Anshika Pipal",
                       phone: "7895614438"
@@ -55,6 +51,10 @@ class DesignEvents extends React.Component{
                     {
                       name: "Ashtha Kapoor",
                       phone: "7392821617"
+                    },
+                    {
+                        name:"Shubham Nayak",
+                        phone:"9792216897"
                     }
                   ],
                   [
@@ -90,6 +90,11 @@ class DesignEvents extends React.Component{
                on which eggs will be dropped from a certain height and it\
                should not break from the impact. The participant will be\
                declared winner based on fair play and conscience of judges."
+            ],
+            eventNote:[
+                " This is a Team Event. A Team of 4 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+                "",
+                ""
             ]
 
 
