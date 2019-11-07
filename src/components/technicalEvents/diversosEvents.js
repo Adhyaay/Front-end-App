@@ -160,7 +160,7 @@ class DiversosEvents extends React.Component{
     }
 
     next = () => {
-        if(this.state.event < 8){
+        if(this.state.event < 2){
             this.setState({ event: this.state.event +1 })
         }
         document.querySelector('.event-viewer').scrollTo(0,0);

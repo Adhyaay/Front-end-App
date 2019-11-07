@@ -103,14 +103,6 @@ class EventViewer extends React.Component {
             <span className="event-viewer--header-container--heading">
               {this.props.name}
             </span>
-            <button
-              className="register modal-trigger"
-              data-target="modal1"
-              onClick={this.props.event === 2 ? this.props.registration : null}
-            >
-            {this.props.event === 2 ? <a href={this.props.registrationLink}> Register</a> : <p>Register</p> }
-              
-            </button>
             {this.props.event === 2 && this.props.name === 'NCL' ? 
             <a href={this.props.registrationLink} target="_blank">
             <button
