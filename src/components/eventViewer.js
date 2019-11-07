@@ -1,6 +1,6 @@
 import React from "react";
 import M from "materialize-css";
-// import { useSwipeable, Swipeable } from 'react-swipeable';
+import { useSwipeable, Swipeable } from 'react-swipeable';
 
 //images
 import arrowImage from "../images/arrow.png";
@@ -52,16 +52,16 @@ class EventViewer extends React.Component {
 
   render() {
     return (
-      // <Swipeable 
-      //     onSwipedRight={(event) => {
-      //       console.log('swiped')
-      //       this.props.previous();
-      //     }}
-      //     onSwipedLeft={(event) => {
-      //       console.log('swiped')
-      //       this.props.next();
-      //     }}
-      //   >
+      <Swipeable 
+          onSwipedRight={(event) => {
+            console.log('swiped')
+            this.props.previous();
+          }}
+          onSwipedLeft={(event) => {
+            console.log('swiped')
+            this.props.next();
+          }}
+        >
       <div
         className="event-viewer"
         style={{ backgroundImage: `url(${this.props.image})` }}
@@ -103,14 +103,14 @@ class EventViewer extends React.Component {
             <span className="event-viewer--header-container--heading">
               {this.props.name}
             </span>
-            {/* <button
+            <button
               className="register modal-trigger"
               data-target="modal1"
               onClick={this.props.event === 2 ? this.props.registration : null}
             >
             {this.props.event === 2 ? <a href={this.props.registrationLink}> Register</a> : <p>Register</p> }
               
-            </button> */}
+            </button>
             {this.props.event === 2 && this.props.name === 'NCL' ? 
             <a href={this.props.registrationLink} target="_blank">
             <button
@@ -223,7 +223,7 @@ class EventViewer extends React.Component {
           </div>
         </div>
       </div>
-      // </Swipeable>
+      </Swipeable>
     );
   }
 }

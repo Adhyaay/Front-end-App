@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-// import { useSwipeable, Swipeable } from 'react-swipeable';
+import { useSwipeable, Swipeable } from 'react-swipeable';
 
 //images
 import testImage0 from '../images/galleryImage1.jpg';
@@ -160,7 +160,7 @@ class Gallery extends React.Component{
             <div className='gallery-wrapper'>
                 
                 <div className='gallery-preview' >
-                {/* <Swipeable 
+                <Swipeable 
                     onSwipedRight={(event) => {
                         console.log('swiped')
                         this.onSwipeRight();
@@ -169,9 +169,9 @@ class Gallery extends React.Component{
                         console.log('swiped')
                         this.onSwipeLeft();
                     }}
-                > */}
+                >
                     <img src={this.state.images[this.state.id]} alt='gallery' />
-                    {/* </Swipeable> */}
+                    </Swipeable>
                 </div>
                 
                 <div className='gallery-items'>
