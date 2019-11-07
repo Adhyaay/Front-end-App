@@ -1,6 +1,6 @@
 import React from "react";
 import M from "materialize-css";
-import { useSwipeable, Swipeable } from 'react-swipeable';
+// import { useSwipeable, Swipeable } from 'react-swipeable';
 
 //images
 import arrowImage from "../images/arrow.png";
@@ -52,16 +52,16 @@ class EventViewer extends React.Component {
 
   render() {
     return (
-      <Swipeable 
-          onSwipedRight={(event) => {
-            console.log('swiped')
-            this.props.previous();
-          }}
-          onSwipedLeft={(event) => {
-            console.log('swiped')
-            this.props.next();
-          }}
-        >
+      // <Swipeable 
+      //     onSwipedRight={(event) => {
+      //       console.log('swiped')
+      //       this.props.previous();
+      //     }}
+      //     onSwipedLeft={(event) => {
+      //       console.log('swiped')
+      //       this.props.next();
+      //     }}
+      //   >
       <div
         className="event-viewer"
         style={{ backgroundImage: `url(${this.props.image})` }}
@@ -223,7 +223,7 @@ class EventViewer extends React.Component {
           </div>
         </div>
       </div>
-      </Swipeable>
+      // </Swipeable>
     );
   }
 }
