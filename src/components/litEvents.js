@@ -35,6 +35,8 @@ class LitEvents extends React.Component{
             event: null,
             eventImages: [bakhanImage, bangTheBenchImage, chitrVichitrImage, jamImage, jinglingImage, kavyamayImage, litratiImage, naziWolfImage, netaImage, posterImage, professorImage, quizImage, situationReactionImage, slamPoetryImage, turnCoatImage],
             eventNames: ['Bakhan', 'ARGUE-MENTAL', 'Chitr Vichitr', 'JAM', 'Jingling', 'Kavyamay', 'Mr. & Ms. Litrati', 'Nazi Wolf', 'Hmara Neta Kaisa Ho', 'Poster Presentation', 'Potential Professor', 'Quizes', 'Situation Reaction', 'Poesy Pinnacle', 'Turn Coat'],
+            eventTime: ['', '1:00 PM', '3:00 PM', '1:45 PM', '4:00 PM', '2:30 PM', '10:00 AM', '11:00 AM', '1:00 PM', '3:30 PM', '1:30 PM', '', '', '', '12:00 PM'],
+            eventDate: ['', 'Day 3', 'Day 3', 'Day 2', 'Day 3', 'Day 1', 'Day 2', 'Day 3', 'Day 2', 'Day 2', 'Day 2', 'All Days', '', '', 'Day 3'],
             eventVenue: ['G-series', 'Civil seminar hall', 'FT Seminar Hall', 'Auditorium', '-', '-', 'Civil seminar hall', '-', 'BE Seminar Hall', '-', 'G- Series', '-', '-', 'Auditorium', '-'],
             eventCoordinators:[
                 [
@@ -398,6 +400,8 @@ class LitEvents extends React.Component{
                     venue={this.state.eventVenue[this.state.event]} 
                     coordinator={this.state.eventCoordinators[this.state.event]} 
                     description={this.state.eventDescription[this.state.event]}
+                    time={this.state.eventTime[this.state.event]}
+                    date={this.state.eventDate[this.state.event]}
                 />}
             {
             window.innerWidth > 620 ?

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import EventViewer from './eventViewer';
-import history from "./history";
+import EventViewer from '../eventViewer';
+import history from "../history";
 import axios from "axios";
 import { connect } from "react-redux";
 
@@ -10,19 +10,15 @@ import { connect } from "react-redux";
 
 
 //images
-import rapBattleImage from '../images/adhyaay/rap-battle.jpg';
-import standUpImage from '../images/adhyaay/stand-up.jpg';
-import fashionImage from '../images/adhyaay/fashion.jpg';
-import gotTalentImage from '../images/adhyaay/got-talent.jpg';
-import openMicImage from '../images/adhyaay/open-mic.jpg';
-import sargamImage from '../images/adhyaay/sargam.jpeg';
-import groupDanceImage from '../images/adhyaay/group-dance.gif';
-import danceFaceOffImage from '../images/adhyaay/dance-faceoff.jpeg';
-import sumoImage from '../images/adhyaay/sumo.jpg';
-import dressImage from '../images/adhyaay/dress.jpg';
+import breakTheCodeImage from '../../images/gameOfCodes/break-the-code.jpeg';
+import dazzelCodeImage from '../../images/gameOfCodes/dazzel-code.jpeg';
+import NCLImage from '../../images/gameOfCodes/NCL.jpeg';
+import programingDateImage from '../../images/gameOfCodes/programing-date.jpeg';
+import RasterizeImage from '../../images/gameOfCodes/rasterize.jpeg';
+import redPencilImage from '../../images/gameOfCodes/red-pencil.jpeg';
+import swapifyImage from '../../images/gameOfCodes/swapify.jpeg';
 
-
-class AdhyaayEvents extends React.Component{
+class GameOfCodesEvents extends React.Component{
     scroller = React.createRef();
     targetFirst = React.createRef();
     targetSecond = React.createRef();
@@ -31,145 +27,154 @@ class AdhyaayEvents extends React.Component{
             scrollPosition: 0,
             viewEvent: false,
             event: null,
-            eventImages: [rapBattleImage, standUpImage, fashionImage, gotTalentImage, openMicImage, sargamImage, groupDanceImage, danceFaceOffImage, sumoImage, dressImage],
-            eventNames: ['Rap Battle', 'Comique', 'Defile De Moda', "HBTU's Got Talent", 'Open Mic', 'Sargam', 'Danse De Groupe', 'Dance Face Off', 'Sumo Wrestling', 'Dress to Impress'],
-            eventVenue: ['Auditorium', 'Auditorium', 'Auditorium', 'BE/FT Lawn', 'BE/FT Lawn', 'Auditorium', 'Auditorium', '-', '-', 'Auditorium'],
-            eventTime: ['Contact Coordinator', '' ,'', '2:30 PM & 11:00 AM', '', '', '', '1:00 PM & 12:00 PM', '', '12:00 PM'],
-            eventDate: ['' ,'', '', 'Day 1 & Day 2', '', '', '', 'Day 2 & Day 3', '', 'Day 1'],
+            eventImages: [breakTheCodeImage, dazzelCodeImage, NCLImage, programingDateImage, RasterizeImage, redPencilImage, swapifyImage],
+            eventNames: ['Break The Code', 'Dazzle Code', 'NCL', "Programming Date", 'Rasterize', 'Red Pencil', 'Swapify'],
+            eventTime: ['10:30 AM', '3:00 PM & 1:00 PM', '9:00 PM & 2:30 PM', '11:00 AM', '11:00 AM', '1:30 PM', '9:00 AM'],
+            eventDate: ['Day 1', 'Day 1 & Day 2', 'Day 2', '08/11 & Day 2', 'Day 2', 'Day 1', 'Day 3'],
+            eventVenue: ['CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.', 'CSE Dept.'],
             eventCoordinators:[
                 [
                     {
-                      name: "Ayushi Seth",
-                      phone: "7014797937"
+                      name: "Shivam negi",
+                      phone: "7982357400"
                     },
                     {
-                      name: "Siddhi Sharma",
-                      phone: "9870698949"
+                      name: "Prateek gupta",
+                      phone: "9650147985"
                     },
                     {
-                      name: "Rishab Shukla",
-                      phone: "8787236589"
+                      name: "Shubham Athwani",
+                      phone: "8707545977"
                     }
                   ],
                   [
                     {
-                      name: "Adishree",
-                      phone: "9598644255"
+                      name: "Gaurang shukla",
+                      phone: "9887816683"
                     },
                     {
-                      name: "Priyanshu",
-                      phone: "8756645595"
+                      name: "Siddharth",
+                      phone: "9460555742"
                     },
                     {
-                      name: "Kanchan",
-                      phone: "8299740931"
+                      name: "Kajal Shukla",
+                      phone: "9415259115"
                     }
                   ],
                   [
                     {
-                      name: "Disha",
-                      phone: "8707054840"
+                        name: "Shivam negi",
+                        phone: "7982357400"
+                      },
+                      {
+                        name: "Prateek gupta",
+                        phone: "9650147985"
+                      },
+                      {
+                        name: "Abhishek verma",
+                        phone: "8112242035"
+                      }
+                  ],
+                  [
+                    {
+                      name: "Anik Gupta",
+                      phone: "8765893504"
+                    },
+                    {
+                      name: "Ankit Gupta",
+                      phone: "9473723424"
                     }
                   ],
                   [
                     {
-                      name: "Rishabh Shukla",
-                      phone: "8787236589"
+                      name: "Sarthak",
+                      phone: "7052510463"
                     },
                     {
-                      name: "Nikita Singh",
-                      phone: "8318721284"
+                      name: "Varun",
+                      phone: "6394211050"
+                    },
+                    {
+                      name: "Sundaram Dubey",
+                      phone: "8924896688"
+                    },
+                    {
+                      name: "Mohd Afzal",
+                      phone: "9889549891"
                     }
                   ],
                   [
-                    {
-                      name: "Yogendra Pal",
-                      phone: "9149030038"
-                    },
-                    {
-                      name: "Navneet Mishra",
-                      phone: "9651872526"
-                    },
-                    {
-                      name: "Bhawna Golani",
-                      phone: "8604615903"
-                    }
+                      {
+                          name: 'Bhawna Golani',
+                          phone: '8604615903'
+                      },
+                      {
+                        name: 'Muskan Gangwar',
+                        phone: '9412166447'
+                      },
+                      {
+                          name: 'Saurabh',
+                          phone: '8299844808'
+                      }
                   ],
                   [
-                    {
-                      name: "Ashtha Gaur",
-                      phone: "8318283637"
-                    },
-                    {
-                      name: "Divyank",
-                      phone: "8953598218"
-                    }
-                  ],
-                  [
-                    {
-                      name: "Pranav Tyagi",
-                      phone: "9540957752"
-                    },
-                    {
-                      name: "Nikita Chaudhary",
-                      phone: "9412226665"
-                    },
-                    {
-                      name: "Rikki Chauhan",
-                      phone: "7985924803"
-                    }
-                  ],
-                  [
-                    {
-                      name: "Pranav Tyagi",
-                      phone: "9540957752"
-                    },
-                    {
-                      name: "Nikita Chaudhary",
-                      phone: "9412226665"
-                    },
-                    {
-                      name: "Rikki Chauhan",
-                      phone: "7985924803"
-                    }
-                  ],
-                  [
-                    {
-                      name: "Nikita Singh",
-                      phone: "9554957217"
-                    },
-                    {
-                      name: "Anchi Rai",
-                      phone: "8004523955"
-                    },
-                    {
-                      name: "Ayushi Seth",
-                      phone: "7014797937"
-                    },
-                    {
-                      name: "Siddhi Sharma",
-                      phone: "9870698949"
-                    }
-                  ],
-                  [
-                    {
-                      name: "Disha",
-                      phone: "8707054840"
-                    }
+                      {
+                          name: 'Animesh shukla',
+                          phone: '9473999609'
+                      },
+                      {
+                        name: 'Tripti gupta',
+                        phone: '7007551242'
+                      },
+                      {
+                          name: 'Dhairy tripathi',
+                          phone: '9936790544'
+                      }
                   ]
             ],
             eventDescription:[
-                "This is the clash of hearts, the war of bragging, the fight of serenity, the conflicts of words. HBTU is organising Rap Battle and Beat Boxing for all those vocal artists out there. Unveil the best mix of music and lyrics in you and fight this war to prove yourself.",
-                "Stand-Up Comedy is a comic style in which a comedian will be performing in front of live audience, usually speaking directly to them.",
-                "Fashion is a way to speak who you are without having to speak. With the adage”Classy and Fabulous”on back of your minds, we have this event planned out to cater to the fashionista in all of us.Gorgeous females sizzle the ramp with their display of sensational apparels, radiating confidence and mystique and sculpted males. ",
-                "A singer? A dancer? Love mimicking? A poet? We appreciate every form of talent. So come and show us what you've got! The best talent gets to win exciting goodies! Gear up and smash the stage with that talent ",
-                "Open mic is an event where anyone can grab the mic and perform. The performer is handed the mic to perform live on the stage in front of the audience. The event is focussed on performance arts like poetry, song, stand-up comedy etc. ",
-                "Billy Joel says-“I think music in itself is healing. It’s an explosive expression of humanity. It’s something we are all touched by. No matter what culture we’re from, everyone loves music.” Here’s an opportunity to get on stage and tell you story through your singing . It’s a singing contest. If you believe in yourself then come compete with the elite. You can sing and play an instrument. Just be your best self and the own the stage ",
-                "Dancers are instruments, like a piano, the choreographer plays. So, come prepared with your groups to make an everlasting impression on the audience in the cultural night ",
-                "Dance like no one is watching. Dance to random songs and compete with others. Let's see who has got the best instant moves ",
-                "This is the game of technique and power.Two persons dressed with an enormous thong pushing each other inside a small ring “dohyo” . And by making your opponent touch the ground with any part of the body other than soles of feet or forcing him out of sumo ring you will become champion ",
-                "Do you think you have a designer in you? It's time to wake up the Manish Malhotra in you and stun everyone else. With your creativity in action, make a dress out of some papers provided to you on spot. You can have the stage to yourself or can have an army of maximum three designers (including you). There'll be a nominal entry fee and assured grand prizes for our winner!"
-            ]
+               "In the first round, there will be a quiz from which 5 teams will\
+               advance to next round. In 2nd round clues will be given which will\
+               lead to other clues. In total there will be 5-6 clues and the team\
+               solving the last clue first will win.",
+               "In first round each participant will be given a code with\
+               some errors. Participants will have to debug the code and\
+               then write it with MONITOR OFF. 50 participants will\
+               advance to the next round. In the next round a basic coding\
+               problem will be given and winners will then be decided.\
+               Ties will be broken by the amount of time taken.",
+               "NCL is a two round event. The first online round will be a\
+               Qualifier. Top 30 teams (at max) in the online round will\
+               qualify for the onsite round.",
+               "It’s a two round event. The first round will be a written round in\
+               which a quiz related to coding as well as personal interest\
+               combined will be conducted. Based on the answers given pairs of a\
+               girl and a boy will be made. The second round will be Oral where\
+               some task(problem based on code)is given to each pair. The pair\
+               whose task will be most resonating will be the winner. It’s a date!",
+               "In this event participants will get an opportunity to show off\
+               their front-end web design skills (HTML/CSS/JAVASCRIPT).\
+               All the participants will be shown a web design for a brief\
+               time and will be provided all relevant data (dimensions, color\
+               codes, etc).\
+               They have to replicate the original web design. Participant\
+               whose web design is closest to the original web design\
+               in the beginning will be considered winner.",
+               "This event will be organized in two phases.\
+               First round : Participants will be given an idea. They have to\
+               implement that idea into an Android Application, Based on their\
+               app, they will be screened for the next round.\
+               Second round : Selected participants will be given a code sample\
+               of app. They have to debug the errors and winner will be decided\
+               accordingly.",
+               "There will be a team of 2 in this. Both the participants will\
+               be made to sit in different rooms and separate questions\
+               will be given to them. After 15-20 minutes they will be\
+               swapped. The first one will now work on code of 2nd\
+               person and vice versa. Team getting maximum points will\
+               win. Ties will be broken by amount of time taken."
+            ],
+            registrationLink: "http://www.hackerrank.com/harcourtian-coding-league"
 
 
         }
@@ -207,6 +212,7 @@ class AdhyaayEvents extends React.Component{
     componentDidUpdate(){
         if(window.innerWidth > 620){
             const position = this.targetFirst.current.scrollTop;
+            const height = document.querySelector('.fixed-div').clientHeight;
             if(this.state.scrollPosition !== position ){
                 console.log(this.state.scrollPosition);
                 this.scroller.current.scrollTo(0, this.state.scrollPosition);
@@ -233,10 +239,12 @@ class AdhyaayEvents extends React.Component{
 
     viewEvent = () => {
         this.setState({ viewEvent: true})
+        this.props.buttonHide();
     }
 
     back = () => {
         this.setState({ viewEvent: false})
+        this.props.buttonDisplay();
     }
 
     next = () => {
@@ -271,7 +279,7 @@ class AdhyaayEvents extends React.Component{
             .post("https://gentle-dusk-33875.herokuapp.com/api/event/register", {
               email: user.email,
               event: this.state.eventNames[this.state.event],
-              mainevent: 'adhyaay',
+              mainevent: 'technical',
               name: user.name,
               phone: user.phone
             })
@@ -301,19 +309,21 @@ class AdhyaayEvents extends React.Component{
                     name={this.state.eventNames[this.state.event]} 
                     venue={this.state.eventVenue[this.state.event]} 
                     coordinator={this.state.eventCoordinators[this.state.event]} 
-                    description={this.state.eventDescription[this.state.event]}
+                    description={this.state.eventDescription[this.state.event]} 
+                    registrationLink={this.state.registrationLink} 
+                    event={this.state.event}
+                    date={this.state.eventDate[this.state.event]} 
                     time={this.state.eventTime[this.state.event]}
-                    date={this.state.eventDate[this.state.event]}
                 />}
             {
             window.innerWidth > 620 ?
             <div className='events-wrapper' >
-                <div className='scroll-wrapper' ref={this.scroller}><div className='scroller adhyaay' ></div></div>
+                <div className='scroll-wrapper' ref={this.scroller}><div className='scroller game-of-code' ></div></div>
                 <div className='fixed-div'>
                     <div className='events-section' ref={this.targetFirst}>
                         <div className='section' id='1'  style={{ backgroundImage : `url(${this.state.eventImages[0]})`}}>
                             <div className='section-content' >
-                                <div className='section-content--title'>Rap Battle</div>
+                                <div className='section-content--title'>{this.state.eventNames[0]}</div>
                                 
                             </div>
                             <div className='button' onClick={this.onClickEvent}>
@@ -323,37 +333,28 @@ class AdhyaayEvents extends React.Component{
                         </div>
                         <div className='section' id='4' style={{ backgroundImage : `url(${this.state.eventImages[3]})`}}>
                         <div className='section-content' >
-                                <div className='section-content--title'>HBTU Got Talent</div>
+                                <div className='section-content--title'>{this.state.eventNames[3]}</div>
                                 
                             </div>
                             <div className='button' onClick={this.onClickEvent}>
                                 <button id='4' onClick={this.viewEvent}>View Event</button>
                             </div>
                         </div>
-                        <div className='section' id='7' style={{ backgroundImage : `url(${this.state.eventImages[6]})`}}>
-                            <div className='section-content' >
-                                <div className='section-content--title'>Danse De Groupe</div>
-                                
-                            </div>
-                            <div className='button' onClick={this.onClickEvent}>
-                                <button id='7' onClick={this.viewEvent}>View Event</button>
-                            </div>
-                        </div>
                     </div>
                     <div className='events-section' >
                         <div className='events-section--container' ref={this.targetSecond} >
-                            <div className='section' id='8' style={{ backgroundImage : `url(${this.state.eventImages[7]})`}}>
+                            <div className='section' id='7' style={{ backgroundImage : `url(${this.state.eventImages[6]})`}}>
                                 <div className='section-content' >
-                                <div className='section-content--title'>Dance Face Off</div>
-                                
-                            </div>
-                            <div className='button' onClick={this.onClickEvent}>
-                                <button id='8' onClick={this.viewEvent}>View Event</button>
-                            </div>
+                                    <div className='section-content--title'>{this.state.eventNames[6]}</div>
+                                    
+                                </div>
+                                <div className='button' onClick={this.onClickEvent}>
+                                    <button id='7' onClick={this.viewEvent}>View Event</button>
+                                </div>
                             </div>
                             <div className='section' id='5' style={{ backgroundImage : `url(${this.state.eventImages[4]})`}}>
                                 <div className='section-content' >
-                                    <div className='section-content--title'>Open Mic</div>
+                                    <div className='section-content--title'>{this.state.eventNames[4]}</div>
                                     
                                 </div>
                                 <div className='button' onClick={this.onClickEvent}>
@@ -362,7 +363,7 @@ class AdhyaayEvents extends React.Component{
                             </div>
                             <div className='section' id='2' style={{ backgroundImage : `url(${this.state.eventImages[1]})`}}>
                                 <div className='section-content' >
-                                    <div className='section-content--title'>Comique</div>
+                                    <div className='section-content--title'>{this.state.eventNames[1]}</div>
                                     
                                 </div>
                                 <div className='button' onClick={this.onClickEvent}>
@@ -376,7 +377,7 @@ class AdhyaayEvents extends React.Component{
                     <div className='events-section' ref={this.targetThird} >
                         <div className='section' id='3' style={{ backgroundImage : `url(${this.state.eventImages[2]})`}}>
                             <div className='section-content' >
-                                <div className='section-content--title'>Defile De Moda</div>
+                                <div className='section-content--title'>{this.state.eventNames[2]}</div>
                                 
                             </div>
                             <div className='button' onClick={this.onClickEvent}>
@@ -385,20 +386,11 @@ class AdhyaayEvents extends React.Component{
                         </div>
                         <div className='section' id='6' style={{ backgroundImage : `url(${this.state.eventImages[5]})`}}>
                             <div className='section-content' >
-                                <div className='section-content--title'>Sargam</div>
+                                <div className='section-content--title'>{this.state.eventNames[5]}</div>
                                 
                             </div>
                             <div className='button' onClick={this.onClickEvent}>
                                 <button id='6' onClick={this.viewEvent}>View Event</button>
-                            </div>
-                        </div>
-                        <div className='section' id='9' style={{ backgroundImage : `url(${this.state.eventImages[8]})`}}>
-                            <div className='section-content' >
-                                <div className='section-content--title'>Sumo Wrestling</div>
-                                
-                            </div>
-                            <div className='button' onClick={this.onClickEvent}>
-                                <button id='9' onClick={this.viewEvent}>View Event</button>
                             </div>
                         </div>
                     </div>
@@ -409,7 +401,7 @@ class AdhyaayEvents extends React.Component{
               <div className='events-wrapper--mobile'>
                 <div className='section' id='1'  style={{ backgroundImage : `url(${this.state.eventImages[0]})`}}>
                     <div className='section-content' >
-                    <div className='section-content--title'>Rap Battle</div>
+                    <div className='section-content--title'>{this.state.eventNames[0]}</div>
                         
                     </div>
                     <div className='button' onClick={this.onClickEvent}>
@@ -461,43 +453,15 @@ class AdhyaayEvents extends React.Component{
                         <button id='6' onClick={this.viewEvent}>View Event</button>
                     </div>
                 </div>
-                <div className='section' id='7'  style={{ backgroundImage : `url(${this.state.eventImages[6]})`}}>
+                <div className='section' id='7' style={{ backgroundImage : `url(${this.state.eventImages[6]})`}}>
                     <div className='section-content' >
-                    <div className='section-content--title'>{this.state.eventNames[6]}</div>
+                        <div className='section-content--title'>{this.state.eventNames[6]}</div>
                         
                     </div>
                     <div className='button' onClick={this.onClickEvent}>
                         <button id='7' onClick={this.viewEvent}>View Event</button>
                     </div>
                 </div>
-                <div className='section' id='8'  style={{ backgroundImage : `url(${this.state.eventImages[7]})`}}>
-                    <div className='section-content' >
-                    <div className='section-content--title'>{this.state.eventNames[7]}</div>
-                        
-                    </div>
-                    <div className='button' onClick={this.onClickEvent}>
-                        <button id='8' onClick={this.viewEvent}>View Event</button>
-                    </div>
-                </div>
-                <div className='section' id='9'  style={{ backgroundImage : `url(${this.state.eventImages[8]})`}}>
-                    <div className='section-content' >
-                    <div className='section-content--title'>{this.state.eventNames[8]}</div>
-                        
-                    </div>
-                    <div className='button' onClick={this.onClickEvent}>
-                        <button id='9' onClick={this.viewEvent}>View Event</button>
-                    </div>
-                </div>
-                <div className='section' id='10'  style={{ backgroundImage : `url(${this.state.eventImages[9]})`}}>
-                    <div className='section-content' >
-                    <div className='section-content--title'>{this.state.eventNames[9]}</div>
-                        
-                    </div>
-                    <div className='button' onClick={this.onClickEvent}>
-                        <button id='10' onClick={this.viewEvent}>View Event</button>
-                    </div>
-                </div>
-              
               </div>
             </div>
             }
@@ -514,4 +478,4 @@ const mapStateToProps = state => ({
   export default connect(
     mapStateToProps,
     null
-  )(AdhyaayEvents);
+  )(GameOfCodesEvents);

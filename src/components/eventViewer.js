@@ -103,13 +103,33 @@ class EventViewer extends React.Component {
             <span className="event-viewer--header-container--heading">
               {this.props.name}
             </span>
-            <button
+            {/* <button
               className="register modal-trigger"
               data-target="modal1"
+              onClick={this.props.event === 2 ? this.props.registration : null}
+            >
+            {this.props.event === 2 ? <a href={this.props.registrationLink}> Register</a> : <p>Register</p> }
+              
+            </button> */}
+            {this.props.event === 2 && this.props.name === 'NCL' ? 
+            <a href={this.props.registrationLink} target="_blank">
+            <button
+              className="register"
+              
+            >
+              Register
+              
+            </button>
+            </a>
+            :
+            <button
+              className="register modal-trigger"
+              data-target="modal1" 
               onClick={this.props.registration}
             >
               Register
-            </button>
+              
+            </button>}
             <div className='arrow-down'>
               <img src={arrowDownImage} alt='Down' />
             </div>
@@ -128,7 +148,7 @@ class EventViewer extends React.Component {
           <div className="event-viewer--about-details-wrapper">
             <div className="event-viewer--about-details-wrapper-details">
               <span className="event-viewer--about-details-wrapper-details-value">
-                Will Update Soon
+                {this.props.date ? this.props.date : 'Contact Coordinator'}
               </span>
               <span className="event-viewer--about-details-wrapper-details-name">
                 Date
@@ -144,7 +164,7 @@ class EventViewer extends React.Component {
             </div>
             <div className="event-viewer--about-details-wrapper-details">
               <span className="event-viewer--about-details-wrapper-details-value">
-              Will Update Soon
+              {this.props.time ? this.props.time : 'Contact Coordinator'}
               </span>
               <span className="event-viewer--about-details-wrapper-details-name">
                 Time
@@ -173,13 +193,25 @@ class EventViewer extends React.Component {
         )}
         <div className="event-viewer--links">
           <div className="event-viewer--links-register">
+          {this.props.event === 2 && this.props.name === 'NCL' ? 
+            <a href={this.props.registrationLink} target="_blank">
+            <button
+              className="register"
+              
+            >
+              Register
+              
+            </button>
+            </a>
+            :
             <button
               className="register modal-trigger"
-              data-target="modal1"
+              data-target="modal1" 
               onClick={this.props.registration}
             >
               Register
-            </button>
+              
+            </button>}
           </div>
           <div className="event-viewer--links-events">
             <button className="previous" onClick={this.props.previous}>

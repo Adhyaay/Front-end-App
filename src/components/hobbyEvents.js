@@ -26,6 +26,7 @@ import scavengerHuntImage from '../images/hobby/scavenger-hunt.jpg';
 import threeLeggedRaceImage from '../images/hobby/three-legged-race.jpg';
 import triviaImage from '../images/hobby/trivia.jpg';
 import tugOfWarImage from '../images/hobby/tug-of-war.jpg';
+import survivalWarImage from '../images/hobby/survival-war.jpg';
 
 
 
@@ -38,9 +39,11 @@ class HobbyEvents extends React.Component{
             scrollPosition: 0,
             viewEvent: false,
             event: null,
-            eventImages: [dashRaceImage, expressoImage, facePaintingImage, frogRaceImage, gullyCricketImage, gullyFootballImage, khoKhoImage, lemonSpoonRace, livingOnTheEdgeImage, minuteToWinItImage, murderMysteryImage, musicalChairImage, pehchankaunImage, pubgImage, sackRaceImage, scavengerHuntImage, threeLeggedRaceImage, triviaImage, tugOfWarImage],
-            eventNames: ['Dash Race', 'Expresso', 'Face Painting', "Frog Race", 'Gully Cricket', 'Gully Football', 'Kho Kho', 'Lemon Spoon', 'Living On The Edge', 'Minute To Win It', 'Murder Mystery', 'Musical Chairs', 'Pehchan Kaun', 'PubG', 'Sack Race', 'Beg, Borrow Or Steal', 'Three Legged Race', 'Trivia', 'Dum Laga Ke Haisa'],
-            eventVenue: ['BE/FT Lawn', 'Infront of Main Building', 'Infront of Main Building', 'BE/FT Lawn', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'BE/FT Lawn', 'BE/FT Lawn', 'BE/FT Lawn', 'Infront of Main Building', 'Infront of Main Building', 'Canteen', 'Infront of Main Building', 'Civil Department', 'BE/FT Lawn', 'BE/FT Lawn', 'BE/FT Lawn', 'Infront of Main Building', 'BE/FT Lawn'],
+            eventImages: [dashRaceImage, expressoImage, facePaintingImage, frogRaceImage, gullyCricketImage, gullyFootballImage, khoKhoImage, lemonSpoonRace, livingOnTheEdgeImage, minuteToWinItImage, murderMysteryImage, musicalChairImage, pehchankaunImage, pubgImage, sackRaceImage, scavengerHuntImage, threeLeggedRaceImage, triviaImage, tugOfWarImage, survivalWarImage],
+            eventNames: ['Dash Race', 'Expresso', 'Face Painting', "Frog Race", 'Gully Cricket', 'Gully Football', 'Kho Kho', 'Lemon Spoon Race', 'Living On The Edge', 'Minute To Win It', 'Murder Mystery', 'Musical Chairs', 'Pehchan Kaun', 'PubG', 'Sack Race', 'Beg, Borrow Or Steal', 'Three Legged Race', 'Trivia', 'Dum Laga Ke Haisa', 'Survival War'],
+            eventVenue: ['Lawn Tennis Ground', 'Infront of Main Building', 'Infront of Main Building', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Infront of Main Building', 'Infront of Main Building', 'Canteen', 'Infront of Main Building', 'Civil Department', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Lawn Tennis Ground', 'Infront of Main Building', 'Lawn Tennis Ground', 'Lawn Tennis Ground'],
+            eventTime: ['2:30 PM', '12:00 PM', '11:00 AM', '3:30 PM', '09:30 AM', '09:30 AM', '12:30 PM', '2:00 PM', '10:00 AM onwards', '9:30 AM onwards', '3:30 PM', '3:00 PM', '12:30 PM', '12:00 PM', '3:30 PM', '3:30 PM', '2:00 PM', '9:30 AM onwards', '4:00 PM', '2:30 PM' ],
+            eventDate: ['Day 3', 'Day 1', 'Day 2', 'Day 1', 'Day 1, Day 2 & Day 3',  'Day 1, Day 2 & Day 3', 'Day 2', 'Day 2' , 'Day 1 & Day 2', 'All Days', 'Day 2', 'Day 1', 'Day 1', 'Day 3', 'Day 1', 'Day 3', 'Day 2', 'All Days', 'Day 1', 'Day 3'],
             eventCoordinators:[
                 [
                     {
@@ -295,6 +298,20 @@ class HobbyEvents extends React.Component{
                       name: "Aagman Dwivedi",
                       phone: "7266832256"
                     }
+                  ],
+                  [
+                    {
+                      name: 'Saumya Rastogi',
+                      phone: '8449914053'
+                    },
+                    {
+                      name: 'Ria Agrawal',
+                      phone: "9839953770"
+                    },
+                    {
+                      name: 'Satyarth',
+                      phone: '7071200246'
+                    }
                   ]
             ],
             eventDescription:[
@@ -316,7 +333,8 @@ class HobbyEvents extends React.Component{
                 "Participants (team of 4) will be provided with a list of some objects which they need to collect in a given time slot. The team who reaches first with the maximum no. of items will win the game",
                 "Presenting you the race on three legs. Yes ever imagined two persons with three legs, each participant’s (team of 2) one leg is tied together and they need to race with other opponents to cross the finish line.",
                 "Come and show your knowledge in fields of movies, sports, science, TV series and much more. It will be a quiz competition with more fun and twists and tasks",
-                "Participants (team of 6) are provided with a rope with a line of reference. The team who drags the opposite team in their area wins and proceeds further for the final round. Don't forget to plant your feet and pull until your last breath."
+                "Participants (team of 6) are provided with a rope with a line of reference. The team who drags the opposite team in their area wins and proceeds further for the final round. Don't forget to plant your feet and pull until your last breath.",
+                "It is the most awaited fun event of the day. Participants (team of 2) need to carry their partner on their back and eliminate the other teams without using hands or legs. The area will be limited and you know the rule the last team standing wins the event. Better plant your feet and try not to fall."
       
             ],
             eventNote:[
@@ -338,6 +356,7 @@ class HobbyEvents extends React.Component{
               " This is a Team Event. A Team of 3 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
               ,
               " This is a Team Event. A Team of 6 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot",
+              " This is a Team Event. A Team of 2 members is required for this Event. Only Team leader needs to Register here. Please come along with your team at event spot"
               
             ]
 
@@ -471,6 +490,8 @@ class HobbyEvents extends React.Component{
                     coordinator={this.state.eventCoordinators[this.state.event]} 
                     description={this.state.eventDescription[this.state.event]} 
                     note={this.state.eventNote[this.state.event]}
+                    date={this.state.eventDate[this.state.event]} 
+                    time={this.state.eventTime[this.state.event]}
                 />}
             { window.innerWidth > 620 ?
             <div className='events-wrapper' >
@@ -827,6 +848,15 @@ class HobbyEvents extends React.Component{
                     </div>
                     <div className='button' onClick={this.onClickEvent}>
                         <button id='19' onClick={this.viewEvent}>View Event</button>
+                    </div>
+                </div>
+                <div className='section' id='20'  style={{ backgroundImage : `url(${this.state.eventImages[19]})`}}>
+                    <div className='section-content' >
+                    <div className='section-content--title'>{this.state.eventNames[19]}</div>
+                        
+                    </div>
+                    <div className='button' onClick={this.onClickEvent}>
+                        <button id='20' onClick={this.viewEvent}>View Event</button>
                     </div>
                 </div>
 

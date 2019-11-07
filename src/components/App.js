@@ -12,6 +12,7 @@ import history from "./history";
 import Loader from "./loader";
 import Home from "./home";
 import Events from "./events";
+import TechnicalEvents from './technicalEvents/technicalEvents';
 import Navbar from "./navbar";
 
 class App extends React.Component {
@@ -43,6 +44,7 @@ class App extends React.Component {
           <Navbar />
           <Route path="/" exact component={Home} />
           <Route path="/events" exact component={Events} />
+          <Route path="/technical-events" exact component={TechnicalEvents} />
           <Route path="/register" exact component={RegsterModal} />
           <Route path="/login" exact component={LoginModal} />
           <Route path="/confirm" exact component={Confirm} />
