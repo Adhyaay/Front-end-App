@@ -38,7 +38,7 @@ class Council extends React.Component {
       <>
         <div className="animation-wrapper">
           <div className="particle-js-wrapper">
-            <Particles
+          {window.innerWidth > 620 && <Particles
               params={{
                 particles: {
                   number: {
@@ -94,6 +94,7 @@ class Council extends React.Component {
                 }
               }}
             />
+            } 
           </div>
           <div className="image">
             <img src={lanternImage1} alt="lantern" />

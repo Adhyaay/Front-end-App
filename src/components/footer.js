@@ -8,7 +8,7 @@ const Footer = (props) => {
     return(
         <>
             <div className='particle-js-wrapper'>
-                <Particles
+            {window.innerWidth > 620 && <Particles
                     params={{
                         "particles": {
                             "number": {
@@ -63,6 +63,7 @@ const Footer = (props) => {
                             }
                         }
                     }} />
+                }
                 </div>
             <footer className="footer-distributed">
 

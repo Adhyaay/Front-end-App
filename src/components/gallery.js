@@ -98,7 +98,7 @@ class Gallery extends React.Component{
         return(
             <>
             <div className='particle-js-wrapper'>
-                <Particles
+            {window.innerWidth > 620 && <Particles
                     params={{
                         "particles": {
                             "number": {
@@ -153,6 +153,7 @@ class Gallery extends React.Component{
                             }
                         }
                     }} />
+                }
                 </div>
             <div className='section-heading'>
                 Gallery

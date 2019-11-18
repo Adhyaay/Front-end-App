@@ -10,7 +10,7 @@ class Counter extends React.Component{
 
     componentDidMount(){
         const year = new Date().getFullYear();
-        const ninthOfNov = new Date((year ), 10, 9).getTime();
+        const ninthOfNov = new Date((year ), 10, 28).getTime();
 
         // countdown
         this.timer = setInterval(() => {
